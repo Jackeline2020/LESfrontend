@@ -12,11 +12,19 @@
     height: 50px;
 }
 
-.btn-cadastro {
-    width: 30%;
-    display: block;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: #dcbc81;
-    font-weight: bold;
+.bt-cadastro{
+    margin-top: 10px;
+}
+.card-cad{
+     margin: 20px;
+}
+
+.card-login{
+    margin-left: 5%;
+    margin-top: 20px;
+
+
+}
+.card{
+    min-height: 300px!important;
 }

@@ -18,7 +18,8 @@
 
 .rodape {
     background: #ddd;
-    height: 5vh;
+    height: 10vh;
+    padding-bottom: 2vh;
 }
 
 .rodape p {
