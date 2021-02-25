@@ -15,15 +15,13 @@
 .bt-cadastro{
     margin-top: 10px;
 }
+/*
 .card-cad{
      margin: 20px;
 }
-
-.card-login{
-    margin-left: 5%;
+*/
+.card-login, .card-cad{
     margin-top: 20px;
-
-
 }
 .card{
     min-height: 300px!important;
