@@ -12,3 +12,4 @@ export class SingletonRouterService {
     this.credentials = credentials;
   }
 }
+ 
