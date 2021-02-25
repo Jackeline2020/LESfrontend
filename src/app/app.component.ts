@@ -1,6 +1,6 @@
 import { Component, ViewChild, AfterViewInit, Input, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material';
-import { SingletonRouterService } from 'src/services/singletonRouter.service';
+import { SingletonRouterService } from '../services/singletonRouter.service';
 
 
 @Component({
