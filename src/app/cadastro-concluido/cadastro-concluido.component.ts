@@ -11,11 +11,11 @@ export class CadastroConcluidoComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.navegarParaLogin();
+    //this.navegarParaLogin();
   }
-  navegarParaLogin() {
+  /*navegarParaLogin() {
     setTimeout(() => {
       this.router.navigate(['/login']);
     }, 3000);
-  }
+  }*/
 }

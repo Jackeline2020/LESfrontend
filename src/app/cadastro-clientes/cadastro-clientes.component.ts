@@ -24,6 +24,7 @@ export class CadastroClientesComponent implements OnInit {
       nome: [''],
       cpf: [''],
       email: [''],
+      senha: [''],
       telefone: [''],
       endereco: ['']
     });

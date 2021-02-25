@@ -11,7 +11,7 @@ export class ContentComponent implements OnInit {
 
   constructor(private router: Router) { }
   ngOnInit() {
-    const options = {
+    /*const options = {
       stringsElement: '#typed-strings',
       strings: ['Traning banking juros amigo', 'Peça a portabilidade e venha ser Traning Bankinhg hoje mesmo', 'Inovavor digital e seguro'],
       typeSpeed: 100,
@@ -25,11 +25,11 @@ export class ContentComponent implements OnInit {
     };
 
     const typed = new Typed('.typing-element', options);
-    localStorage.removeItem('cadastro');
+    localStorage.removeItem('cadastro');*/
   }
 
-  gotoCadastroClientes() {
+  /*gotoCadastroClientes() {
     this.router.navigate(['cadastro-clientes']);
-   }
+   }*/
 }
 
