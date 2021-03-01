@@ -52,3 +52,9 @@
     color: #fff;
     border: 2px solid;
 }
+.btn-primary{
+    min-width: 100px!important;
+}
+.material-icons{
+    font-size: 19px;
+}
