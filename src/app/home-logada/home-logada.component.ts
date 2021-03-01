@@ -9,7 +9,8 @@ import { UserService } from '../user.service';
 })
 export class HomeLogadaComponent implements OnInit {
   getCadastro;
-  nameCliente;
+  nomeCompleto; cpf; celular; email; senha; tipoLogradouro; cep;
+  logradouro; bairro; numero; cidade; estado;
   modalidade;
   constructor(
     private modalidadeService: ModalidadesService,
@@ -18,12 +19,18 @@ export class HomeLogadaComponent implements OnInit {
 
   ngOnInit() {
     this.getCadastro = JSON.parse(localStorage.getItem('cadastro'));
-    this.nameCliente = this.getCadastro['nome'];
-    console.log(this.nameCliente);
-
-    this.modalidade = this.modalidadeService.getModalidade();
-
-    console.log(this.modalidade);
+    this.nomeCompleto = this.getCadastro['nome'];
+    this.cpf = this.getCadastro['cpf'];
+    this.celular = this.getCadastro['telefone'];
+    this.email = this.getCadastro['email'];
+    this.senha = this.getCadastro['senha'];
+    this.tipoLogradouro = this.getCadastro['tipoLogradouro'];
+    this.cep = this.getCadastro['cep'];
+    this.logradouro = this.getCadastro['logradouro'];
+    this.bairro = this.getCadastro['bairro'];
+    this.numero = this.getCadastro['numero'];
+    this.cidade = this.getCadastro['cidade'];
+    this.estado = this.getCadastro['estado'];
   }
 
   investment(id) {

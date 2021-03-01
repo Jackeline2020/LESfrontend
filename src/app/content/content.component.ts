@@ -1,35 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import * as Typed from 'typed.js';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
-export class ContentComponent implements OnInit {
+export class ContentComponent {
 
-  constructor(private router: Router) { }
-  ngOnInit() {
-    /*const options = {
-      stringsElement: '#typed-strings',
-      strings: ['Traning banking juros amigo', 'Peça a portabilidade e venha ser Traning Bankinhg hoje mesmo', 'Inovavor digital e seguro'],
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 200,
-      smartBackspace: true,
-      fadeOut: true,
-      showCursor: false,
-      startDelay: 1000,
-      loop: true
-    };
-
-    const typed = new Typed('.typing-element', options);
-    localStorage.removeItem('cadastro');*/
+  constructor(public dialog: MatDialog) { }
+  
+  openDialog() {
+    this.dialog.open(ContentComponentDialog);
   }
-
-  /*gotoCadastroClientes() {
-    this.router.navigate(['cadastro-clientes']);
-   }*/
 }
 
+@Component({
+  selector: 'app-content',
+  templateUrl: './content.component.modal.html',
+  styleUrls: ['./content.component.css']
+})
+export class ContentComponentDialog {}

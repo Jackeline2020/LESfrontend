@@ -12,6 +12,7 @@ import { SingletonRouterService } from 'src/services/singletonRouter.service';
 })
 export class HeaderComponent implements OnInit {
   formLogin;
+  formSearch;
   theEvent;
   key;
   regex;
@@ -26,6 +27,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.formLogin = this.fb.group({
       cpf: ['']
+    });
+
+    this.formSearch = this.fb.group({
+      nome: ['']
     });
   }
   // regexp
@@ -61,4 +66,5 @@ export class HeaderComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
+  
 }

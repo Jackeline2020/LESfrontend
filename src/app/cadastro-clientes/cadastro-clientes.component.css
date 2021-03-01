@@ -1,28 +1,10 @@
-.box-cadastro {
-    margin: 30px;
-    padding: 30px;
-}
-
-.cadastro {
-    padding: 10px;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    border-radius: 0;
-    outline: none;
-    height: 50px;
-}
-
 .bt-cadastro{
     margin-top: 10px;
 }
-/*
-.card-cad{
-     margin: 20px;
-}
-*/
+
 .card-login, .card-cad{
     margin-top: 20px;
 }
 .card{
-    min-height: 300px!important;
+    min-height: 200px!important;
 }
