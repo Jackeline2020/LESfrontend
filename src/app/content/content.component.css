@@ -58,3 +58,9 @@
 .material-icons{
     font-size: 19px;
 }
+.conteudo{
+    min-height: 700px;
+}
+.card{
+    height: 436px!important;
+}
