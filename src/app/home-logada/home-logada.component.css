@@ -1,3 +1,7 @@
 .table {
     margin-left: 10px;
 }
+
+.conteudo{
+    min-height: 650px;
+} /* colocar em todas as paginas */

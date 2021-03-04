@@ -1,5 +1,5 @@
 <h1 mat-dialog-title>Liquidificador Mondial</h1>
-<img class="card-img-top" src="./../img/liquidificador.png" alt="liquidificador">
+<img class="card-img-top" src="/assets/img/liquidificador.png" alt="liquidificador">
 <br>
 <div mat-dialog-content>
   Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.
@@ -10,6 +10,8 @@
   <br>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-primary">Fechar</button>
-  <button type="button" class="btn btn-primary" data-dismiss="modal"><span class="material-icons">local_grocery_store</span></button>
+  <button type="button" class="btn btn-primary" mat-dialog-close>Fechar</button>
+  <a class="nav-link" routerLink="cadastro-clientes">
+    <button type="button" class="btn btn-primary" data-dismiss="modal" mat-dialog-close><span class="material-icons">local_grocery_store</span></button>
+  </a>
 </div>
