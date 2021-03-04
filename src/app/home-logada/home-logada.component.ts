@@ -2,12 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { ModalidadesService } from '../modalidades.service';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
+//stepp
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+
 @Component({
   selector: 'app-home-logada',
   templateUrl: './home-logada.component.html',
   styleUrls: ['./home-logada.component.css']
 })
 export class HomeLogadaComponent implements OnInit {
+  //stepp
+  isLinear = false;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+
   getCadastro;
   nomeCompleto; cpf; celular; email; senha; tipoLogradouro; cep;
   logradouro; bairro; numero; cidade; estado;
@@ -15,7 +23,9 @@ export class HomeLogadaComponent implements OnInit {
   constructor(
     private modalidadeService: ModalidadesService,
     private router: Router,
-    private userService: UserService) { }
+    private userService: UserService,
+    //stepp
+    private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.getCadastro = JSON.parse(localStorage.getItem('cadastro'));
@@ -31,6 +41,14 @@ export class HomeLogadaComponent implements OnInit {
     this.numero = this.getCadastro['numero'];
     this.cidade = this.getCadastro['cidade'];
     this.estado = this.getCadastro['estado'];
+
+    //stepp
+    this.firstFormGroup = this._formBuilder.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
   }
 
   investment(id) {
