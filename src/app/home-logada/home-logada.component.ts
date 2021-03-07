@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
 
@@ -13,7 +13,7 @@ export class HomeLogadaComponent implements OnInit {
   getCadastro;
   valoresForm: Object;
   conversao;
-  nomeCompleto; email; senha; 
+  nomeCompleto; email; 
   /*cpf; celular; tipoLogradouro; cep;
   logradouro; bairro; numero; cidade; estado;
   modalidade;*/
@@ -29,7 +29,6 @@ export class HomeLogadaComponent implements OnInit {
     this.formCadastro = this.fb.group({
       nome: [''],
       email: [''],
-      senha: [''],
       cpf: ['']
     });
 
@@ -43,7 +42,6 @@ export class HomeLogadaComponent implements OnInit {
     this.getCadastro = JSON.parse(localStorage.getItem('cadastro'));
     this.nomeCompleto = this.getCadastro['nome'];
     this.email = this.getCadastro['email'];
-    this.senha = this.getCadastro['senha'];
     /*this.cpf = this.getCadastro['cpf'];
     this.celular = this.getCadastro['telefone'];
     this.tipoLogradouro = this.getCadastro['tipoLogradouro'];
@@ -66,20 +64,19 @@ export class HomeLogadaComponent implements OnInit {
 
 @Component({
   selector: 'app-home-logada',
-  templateUrl: './home-logada.component.modalAlterarCli.html',
+  templateUrl: './home-logada.modal.alterar.cliente.html',
   styleUrls: ['./home-logada.component.css']
 })
 
 export class HomeLogadaModalCli {
   getCadastro;
-  nomeCompleto; email; senha; cpf; 
+  nomeCompleto; email; cpf; 
   constructor(public dialog: MatDialog) { }
 
 ngOnInit() {
     this.getCadastro = JSON.parse(localStorage.getItem('cadastro'));
     this.nomeCompleto = this.getCadastro['nome'];
     this.email = this.getCadastro['email'];
-    this.senha = this.getCadastro['senha'];
     this.cpf = this.getCadastro['cpf'];
   }
 

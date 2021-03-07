@@ -1,4 +1,3 @@
-
 <!--div class="container custom-height">
   <p>Bem vindo <strong>{{nameCliente}}</strong></p>
   <div class="row mt-5">
@@ -15,81 +14,6 @@
   </div>
 </div-->
 
-<!--div class="row conteudo">
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome Completo</th>
-      <th scope="col">CPF</th>
-      <th scope="col">Celular</th>
-      <th scope="col">E-mail</th>
-      <th scope="col">Senha</th>
-      <th scope="col">Tipo Logradouro</th>
-      <th scope="col">CEP</th>
-      <th scope="col">Logradouro</th>
-      <th scope="col">Bairro</th>
-      <th scope="col">Número</th>
-      <th scope="col">Cidade</th>
-      <th scope="col">Estado</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>{{nomeCompleto}}</td>
-      <td>{{cpf}}</td>
-      <td>{{celular}}</td>
-      <td>{{email}}</td>
-      <td>{{senha}}</td>
-      <td>{{tipoLogradouro}}</td>
-      <td>{{cep}}</td>
-      <td>{{logradouro}}</td>
-      <td>{{bairro}}</td>
-      <td>{{numero}}</td>
-      <td>{{cidade}}</td>
-      <td>{{estado}}</td>
-      <td><span class="material-icons"> mode_edit_outline </span></td>
-      <td><span class="material-icons"> delete </span></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>{{nomeCompleto}}</td>
-      <td>{{cpf}}</td>
-      <td>{{celular}}</td>
-      <td>{{email}}</td>
-      <td>{{senha}}</td>
-      <td>{{tipoLogradouro}}</td>
-      <td>{{cep}}</td>
-      <td>{{logradouro}}</td>
-      <td>{{bairro}}</td>
-      <td>{{numero}}</td>
-      <td>{{cidade}}</td>
-      <td>{{estado}}</td>
-      <td><span class="material-icons"> mode_edit_outline </span></td>
-      <td><span class="material-icons"> delete </span></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>{{nomeCompleto}}</td>
-      <td>{{cpf}}</td>
-      <td>{{celular}}</td>
-      <td>{{email}}</td>
-      <td>{{senha}}</td>
-      <td>{{tipoLogradouro}}</td>
-      <td>{{cep}}</td>
-      <td>{{logradouro}}</td>
-      <td>{{bairro}}</td>
-      <td>{{numero}}</td>
-      <td>{{cidade}}</td>
-      <td>{{estado}}</td>
-      <td><span class="material-icons"> mode_edit_outline </span></td>
-      <td><span class="material-icons"> delete </span></td>
-    </tr>
-  </tbody>
-</table>
-</div-->
-
 <div class="conteudo">
 <table class="table">
   <thead>
@@ -101,7 +25,6 @@
     <tr>
       <th>Nome</th>
       <th>E-mail</th>
-      <th>Senha</th>
       <th>CPF</th>
       <th>Alterar</th>
     </tr>
@@ -110,53 +33,81 @@
     <tr>
       <td>{{nomeCompleto}}</td>
       <td>{{email}}</td>
-      <td>{{senha}}</td>
       <td>{{cpf}}</td>
       <td>
         <button class="btn btn-link" mat-button (click)="openDialog()"><span class="material-icons">mode_edit_outline</span></button>
       </td>
-      <!--td>
-        <button type="button" class="btn btn-link" data-dismiss="modal" mat-dialog-close><span class="material-icons">delete</span></button>
-      </td-->
     </tr>
-    <!--tr>
-      <th scope="row">2</th>
-      <td>{{nomeCompleto}}</td>
-      <td>{{cpf}}</td>
-      <td>{{celular}}</td>
-      <td>{{email}}</td>
-      <td>{{senha}}</td>
-      <td>{{tipoLogradouro}}</td>
-      <td>{{cep}}</td>
-      <td>{{logradouro}}</td>
-      <td>{{bairro}}</td>
-      <td>{{numero}}</td>
-      <td>{{cidade}}</td>
-      <td>{{estado}}</td>
-      <td><span class="material-icons"> mode_edit_outline </span></td>
-      <td><span class="material-icons"> delete </span></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>{{nomeCompleto}}</td>
-      <td>{{cpf}}</td>
-      <td>{{celular}}</td>
-      <td>{{email}}</td>
-      <td>{{senha}}</td>
-      <td>{{tipoLogradouro}}</td>
-      <td>{{cep}}</td>
-      <td>{{logradouro}}</td>
-      <td>{{bairro}}</td>
-      <td>{{numero}}</td>
-      <td>{{cidade}}</td>
-      <td>{{estado}}</td>
-      <td><span class="material-icons"> mode_edit_outline </span></td>
-      <td><span class="material-icons"> delete </span></td>
-    </tr!-->
   </tbody>
 </table>
-</div>
+<!--contatos-->
+<table class="table">
+  <thead>
+    <tr>
+      <th>DDD</th>
+      <th>Celular</th>
+      <th>Adicionar</th>
+      <th>Alterar</th>
+      <th>Deletar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ddd}}</td>
+      <td>{{celular}}</td>
+      <td>
+        <button class="btn btn-link" mat-button (click)="openDialog()"><span class="material-icons">add_ic_call</span></button>
+      </td>
+      <td>
+        <button class="btn btn-link" mat-button (click)="openDialog()"><span class="material-icons">mode_edit_outline</span></button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-link" data-dismiss="modal" mat-dialog-close><span class="material-icons">delete</span></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--enderecos-->
+<table class="table">
+  <thead>
+    <tr>
+      <th>Tipo Endereço</th>
+      <th>CEP</th>
+      <th>Logradouro</th>
+      <th>Número</th>
+      <th>Bairro</th>
+      <th>Complemento</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Adicionar</th>
+      <th>Alterar</th>
+      <th>Deletar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{tipoEndereco}}</td>
+      <td>{{cep}}</td>
+      <td>{{logradouro}}</td>
+      <td>{{numero}}</td>
+      <td>{{bairro}}</td>
+      <td>{{complemento}}</td>
+      <td>{{cidade}}</td>
+      <td>{{estado}}</td>
+      <td>
+        <button class="btn btn-link" mat-button (click)="openDialog()"><span class="material-icons">add_circle</span></button>
+      </td>
+      <td>
+        <button class="btn btn-link" mat-button (click)="openDialog()"><span class="material-icons">mode_edit_outline</span></button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-link" data-dismiss="modal" mat-dialog-close><span class="material-icons">delete</span></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
+</div>
 <!--div class="row conteudo">
 
   <div class="col-sm-5 card-cad">
@@ -261,23 +212,4 @@
           <!-AO FINAL TERÁ UM BOTÃO DELETAR MINHA CONTA->
         </div>
       </div>
-    </div>
-  
-
-    <!-th scope="col">Celular</th>
-      <th scope="col">Tipo Logradouro</th>
-      <th scope="col">CEP</th>
-      <th scope="col">Logradouro</th>
-      <th scope="col">Bairro</th>
-      <th scope="col">Número</th>
-      <th scope="col">Cidade</th>
-      <th scope="col">Estado</th>
-
-      <td>{{celular}}</td>
-      <td>{{tipoLogradouro}}</td>
-      <td>{{cep}}</td>
-      <td>{{logradouro}}</td>
-      <td>{{bairro}}</td>
-      <td>{{numero}}</td>
-      <td>{{cidade}}</td>
-      <td>{{estado}}</td!-->
+    </div>-->
