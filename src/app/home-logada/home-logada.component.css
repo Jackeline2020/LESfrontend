@@ -1,18 +1,9 @@
-.table {
-    margin-left: 10px;
-}
-
 .conteudo{
-    min-height: 650px;
+  min-height: 650px;
+  margin: 50px;
 } /* colocar em todas as paginas */
 
+.a{
+  margin-left: 80%;
+} /* colocar em todas as paginas */
 
-/*stepp*/
-.mat-stepper-vertical {
-    margin-top: 8px;
-  }
-  
-  .mat-form-field {
-    margin-top: 16px;
-  }
-  

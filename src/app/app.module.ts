@@ -11,7 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HomeLogadaComponent } from './home-logada/home-logada.component';
+import { HomeLogadaComponent, HomeLogadaModalCli  } from './home-logada/home-logada.component';
 import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-concluido.component';
 import { AuthGuard } from './../../auth.guard';
 import { AuthService } from './../../auth.service';
@@ -36,6 +36,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     FooterComponent,
     CadastroClientesComponent,
     HomeLogadaComponent,
+    HomeLogadaModalCli,
     CadastroConcluidoComponent,
     AcessoNegadoComponent,
     ModalNotCadastroComponent,
@@ -53,8 +54,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     NgxMaskModule.forRoot()
   ],
   providers: [AuthGuard, AuthService, SingletonRouterService, { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' }}],
-  entryComponents: [ModalNotCadastroComponent, ContentComponent, ContentComponentDialog, HomeLogadaComponent],
-  bootstrap: [AppComponent, ContentComponentDialog, HomeLogadaComponent],
+  entryComponents: [ModalNotCadastroComponent, ContentComponent, ContentComponentDialog, HomeLogadaComponent, HomeLogadaModalCli],
+  bootstrap: [AppComponent, ContentComponentDialog, HomeLogadaComponent, HomeLogadaModalCli],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

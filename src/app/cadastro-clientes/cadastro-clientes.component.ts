@@ -32,17 +32,8 @@ export class CadastroClientesComponent implements OnInit {
     //localStorage.clear();
     this.formCadastro = this.fb.group({
       nome: [''],
-      cpf: [''],
-      telefone: [''],
       email: [''],
       senha: [''],
-      tipoLogradouro: [''],
-      cep: [''],
-      logradouro: [''],
-      bairro: [''],
-      numero: [''],
-      cidade: [''],
-      estado: [''],
       termos: ['']
     });
   
