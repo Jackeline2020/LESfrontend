@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
   key;
   regex;
   keys;
-  getCadastro;
   message;
+  getCadastro;
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.formLogin = this.fb.group({
+      email: [''],
       senha: ['']
     });
   }
@@ -43,7 +44,9 @@ export class LoginComponent implements OnInit {
     this.getCadastro = JSON.parse(localStorage.getItem('cadastro'));
     const senhaPersistido = this.getCadastro['senha'];
     const senhaDigitado = this.formLogin.get('senha').value;
-    if (senhaPersistido === senhaDigitado) {
+    const emailPersistido = this.getCadastro['email'];
+    const emailDigitado = this.formLogin.get('email').value;
+    if (senhaPersistido === senhaDigitado && emailPersistido === emailDigitado) {
       this.router.navigate(['home-logada']);
     } else {
       this.openDialog();

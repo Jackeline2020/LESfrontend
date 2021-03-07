@@ -1,27 +1,14 @@
-.acessar-conta {
-    position: relative;
-    top: 10px;
-    background-color: #333;
-    border: 0;
-    color: #fff;
+.bt-cadastro{
+    margin-top: 10px;
 }
 
-@media screen and (min-width: 600px) {
-    .wrapper-header {
-        height: 15vh;
-    }
+.card-login, .card-cad{
+    margin-top: 20px;
+}
+.card{
+    min-height: 200px!important;
+}
 
-    .menu-header li {
-        list-style: none;
-        display: inline;
-        position: relative;
-        margin: 10px;
-        top: 30px;
-        font-size: 18px;
-    }
-    
-}
-.form-row.align-items-center {
-    height: 266px;
-    margin-top: 30px;
-}
+.conteudo{
+    min-height: 650px;
+} /* colocar em todas as paginas */

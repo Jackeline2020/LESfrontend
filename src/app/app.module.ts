@@ -2,14 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatDialogModule} from '@angular/material/dialog';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent, ContentComponentDialog } from './content/content.component';
-import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component';
+import { CRUDClientesComponent } from './crud-clientes/crud-clientes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeLogadaComponent, HomeLogadaModalCli  } from './home-logada/home-logada.component';
 import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-concluido.component';
@@ -19,7 +19,7 @@ import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
 import { ModalNotCadastroComponent } from './modal-not-cadastro/modal-not-cadastro.component';
 import { SingletonRouterService } from '../services/singletonRouter.service';
 
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule} from '@angular/material/card';
 import { LoginComponent } from './login/login.component';
 import { PainelInvestirComponent } from './painel-investir/painel-investir.component';
 import { InvestirComponent } from './investir/investir.component';
@@ -34,7 +34,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     ContentComponent, 
     ContentComponentDialog,
     FooterComponent,
-    CadastroClientesComponent,
+    CRUDClientesComponent,
     HomeLogadaComponent,
     HomeLogadaModalCli,
     CadastroConcluidoComponent,

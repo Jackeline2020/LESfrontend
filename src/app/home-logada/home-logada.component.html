@@ -15,13 +15,12 @@
 </div-->
 
 <div class="conteudo">
+    <button type="button" class="btn btn-primary a">Minha Conta</button>
+    <button type="button" class="btn btn-primary a">Meus Contatos</button>
+    <button type="button" class="btn btn-primary a">Meus Enderecos</button>  
+
 <table class="table">
   <thead>
-    <tr>
-      <th scope="col"><button type="button" class="btn btn-primary a">Minha Conta</button></th>
-      <th scope="col"><button type="button" class="btn btn-primary a">Meus Contatos</button></th>
-      <th scope="col"><button type="button" class="btn btn-primary a">Meus Enderecos</button></th>  
-    </tr>
     <tr>
       <th>Nome</th>
       <th>E-mail</th>
@@ -34,12 +33,13 @@
       <td>{{nomeCompleto}}</td>
       <td>{{email}}</td>
       <td>{{cpf}}</td>
-      <td>
-        <button class="btn btn-link" mat-button (click)="openDialog()"><span class="material-icons">mode_edit_outline</span></button>
-      </td>
+      <td><button class="btn btn-link" mat-button (click)="openDialog()">
+        <span class="material-icons">mode_edit_outline</span>
+      </button></td>
     </tr>
   </tbody>
 </table>
+
 <!--contatos-->
 <table class="table">
   <thead>
@@ -62,11 +62,12 @@
         <button class="btn btn-link" mat-button (click)="openDialog()"><span class="material-icons">mode_edit_outline</span></button>
       </td>
       <td>
-        <button type="button" class="btn btn-link" data-dismiss="modal" mat-dialog-close><span class="material-icons">delete</span></button>
+        <button class="btn btn-link" mat-button (click)="openDialog()"><span class="material-icons">delete</span></button>
       </td>
     </tr>
   </tbody>
 </table>
+
 <!--enderecos-->
 <table class="table">
   <thead>
@@ -95,13 +96,16 @@
       <td>{{cidade}}</td>
       <td>{{estado}}</td>
       <td>
-        <button class="btn btn-link" mat-button (click)="openDialog()"><span class="material-icons">add_circle</span></button>
+        <button class="btn btn-link" mat-button (click)="openDialog()">
+        <span class="material-icons">add_circle</span></button>
       </td>
       <td>
-        <button class="btn btn-link" mat-button (click)="openDialog()"><span class="material-icons">mode_edit_outline</span></button>
+        <button class="btn btn-link" mat-button (click)="openDialog()">
+        <span class="material-icons">mode_edit_outline</span></button>
       </td>
       <td>
-        <button type="button" class="btn btn-link" data-dismiss="modal" mat-dialog-close><span class="material-icons">delete</span></button>
+        <button type="button" class="btn btn-link" data-dismiss="modal" mat-dialog-close>
+        <span class="material-icons">delete</span></button>
       </td>
     </tr>
   </tbody>
