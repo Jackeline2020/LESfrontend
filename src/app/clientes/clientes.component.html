@@ -1,0 +1,37 @@
+<div class="conteudo">
+    <a href="../clientes/">
+      <button type="button" class="btn btn-primary stepp">Minha Conta</button>
+    </a>
+    <a href="../telefones/">
+    <button type="button" class="btn btn-primary stepp">Meus Telefones</button>
+    </a>
+    <a href="../enderecos/">
+    <button type="button" class="btn btn-primary stepp">Meus Enderecos</button>  
+    </a>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>CPF</th>
+      <th>Alterar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{nomeCompleto}}</td>
+      <td>{{email}}</td>
+      <td>{{cpf}}</td>
+      <td>
+        <button class="btn btn-link" mat-button (click)="openDialogAlterar()">
+        <span class="material-icons">mode_edit_outline</span></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-danger danger" mat-button (click)="openDialogDeletar()"> deletar sua conta
+  <span class="material-icons"> delete_forever </span> <br>
+</button>
+</div>

@@ -1,0 +1,16 @@
+<h5 class="card-title">INFORMAÇÕES PESSOAIS</h5>
+<form class="mt-4" (ngSubmit)='cadastro()' [formGroup]='formCadastro'>
+  <div class="form-row">
+    <div class="col-md-12 mb-3">
+      <input type="text" class="form-control" placeholder="Nome Completo" formControlName='nome' value="{{nomeCompleto}}">
+    </div>
+    <div class="col-md-12 mb-3">
+      <input type="text" class="form-control" placeholder="E-mail" formControlName='email' value="{{email}}">
+    </div>
+    <div class="col-md-12 mb-3">
+      <input type="text" class="form-control" placeholder="CPF" formControlName='cpf' maxlength="14" mask="000.000.000-00" value="{{cpf}}">
+    </div>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary bt-cadastro">Alterar</button>
+</form>

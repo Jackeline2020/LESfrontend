@@ -1,68 +1,54 @@
-.wrapper-header  {
-    height: 30vh;
-    padding: 30px;
-    background: rgb(0, 114, 188);
-    color: #fff;
-    box-shadow: 0 2px 5px -2px grey;
-}
-
 .menu-header li  {
-    display: block;
-    font-size: 16px;
-    margin-left: -24px;
-    padding: 0px;
+  display: block;
+  font-size: 16px;
+  margin-left: -24px;
+  padding: 0px;
 }
 
 
 @media screen and (min-width: 600px) {
-    .wrapper-header {
-        height: 15vh;
-    }
+  .wrapper-header {
+    height: 15vh;
+  }
 
-    .menu-header li {
-        list-style: none;
-        display: inline;
-        position: relative;
-        margin: 10px;
-        top: 30px;
-        font-size: 18px;
-    }
-    
-}
-
-.position-login {
+  .menu-header li {
+    list-style: none;
+    display: inline;
     position: relative;
-    top: -152px;
+    margin: 10px;
+    top: 30px;
+    font-size: 18px;
+  }  
 }
 
 #divBusca{
-    background-color:#E0EEEE;
-    border:solid 2px #5F9EA0;
-    border-radius:10px;
-    width:300px;
-    height:32px;
-  }
+  background-color:#E0EEEE;
+  border:solid 2px #5F9EA0;
+  border-radius:10px;
+  width:300px;
+  height:32px;
+}
   
-  #txtBusca{
-    float:left;
-    background-color:transparent;
-    padding-left:5px;
-    font-size:18px;
-    border:none;
-    height:32px;
-    width:191px;
-  }
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:191px;
+}
   
-  #btnBusca{
-    border:none;
-    float:left;
-    height:32px;
-    border-radius:0 7px 7px 0;
-    width:70px;
-    font-weight:bold;
-    background:#5F9EA0;
-  }
+#btnBusca{
+  border:none;
+  float:left;
+  height:32px;
+  border-radius:0 7px 7px 0;
+  width:70px;
+  font-weight:bold;
+  background:#5F9EA0;
+}
   
-  #divBusca span{
-    float:left;
-  }
+#divBusca span{
+  float:left;
+}

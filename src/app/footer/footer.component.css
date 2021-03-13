@@ -1,21 +1,3 @@
-.topicos {
-    width: 100vw;
-    height: 10vh;
-    background: #000;
-    color: rgba(255, 255, 255, 0.6) !important;
-    padding: 10px;
-}
-
-.topicos h6 {
-    color: #fff;
-}
-
-
-.topicos li {
-    list-style: none;
-    line-height: 3;
-}
-
 .rodape {
     background: #ddd;
     height: 10vh;

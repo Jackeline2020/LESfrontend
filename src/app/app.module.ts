@@ -1,29 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatDialogModule} from '@angular/material/dialog';
-import { HeaderComponent } from './header/header.component';
-import { ContentComponent, ContentComponentDialog } from './content/content.component';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
-import { FooterComponent } from './footer/footer.component';
-import { AppRoutingModule } from './app-routing/app-routing.module';
-import { CRUDClientesComponent } from './crud-clientes/crud-clientes.component';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HomeLogadaComponent, HomeLogadaModalCli  } from './home-logada/home-logada.component';
-import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-concluido.component';
-import { AuthGuard } from './../../auth.guard';
-import { AuthService } from './../../auth.service';
-import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
-import { ModalNotCadastroComponent } from './modal-not-cadastro/modal-not-cadastro.component';
+import { MatCardModule} from '@angular/material/card';
+import { MatDialogModule} from '@angular/material/dialog';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+
 import { SingletonRouterService } from '../services/singletonRouter.service';
 
-import { MatCardModule} from '@angular/material/card';
+import { AuthGuard } from './../../auth.guard';
+import { AuthService } from './../../auth.service';
+
+import { ModalCadastroConcluidoComponent } from './modal-cadastro-concluido/modal-concluido.component';
+import { ModalNotCadastroComponent } from './modal-not-cadastro/modal-not-cadastro.component';
+
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './routing/routing.module';
+
+import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component';
 import { LoginComponent } from './login/login.component';
-import { PainelInvestirComponent } from './painel-investir/painel-investir.component';
-import { InvestirComponent } from './investir/investir.component';
-import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContentComponent, ContentComponentDialog } from './content/content.component';
+import { ClientesComponent, ClientesComponentModalDeletar, ClientesComponentModalAlterar  } from './clientes/clientes.component';
+import { TelefonesComponent, TelefonesComponentModalAlterar, TelefonesComponentModalCadastrar, TelefonesComponentModalDeletar } from './telefones/telefones.component';
+import { EnderecosComponent, EnderecosComponentModalCadastrar, EnderecosComponentModalDeletar, EnderecosComponentModalAlterar } from './enderecos/enderecos.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -34,15 +36,25 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     ContentComponent, 
     ContentComponentDialog,
     FooterComponent,
-    CRUDClientesComponent,
-    HomeLogadaComponent,
-    HomeLogadaModalCli,
-    CadastroConcluidoComponent,
-    AcessoNegadoComponent,
+
+    CadastroClientesComponent,
+    ClientesComponent,
+    ClientesComponentModalDeletar,
+    ClientesComponentModalAlterar,
+
+    ModalCadastroConcluidoComponent,
     ModalNotCadastroComponent,
     LoginComponent,
-    PainelInvestirComponent,
-    InvestirComponent
+
+    TelefonesComponent,
+    TelefonesComponentModalAlterar,
+    TelefonesComponentModalCadastrar,
+    TelefonesComponentModalDeletar,
+
+    EnderecosComponent,
+    EnderecosComponentModalCadastrar,
+    EnderecosComponentModalDeletar,
+    EnderecosComponentModalAlterar,
   ],
   imports: [
     BrowserModule,
@@ -53,9 +65,39 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     MatCardModule,
     NgxMaskModule.forRoot()
   ],
-  providers: [AuthGuard, AuthService, SingletonRouterService, { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' }}],
-  entryComponents: [ModalNotCadastroComponent, ContentComponent, ContentComponentDialog, HomeLogadaComponent, HomeLogadaModalCli],
-  bootstrap: [AppComponent, ContentComponentDialog, HomeLogadaComponent, HomeLogadaModalCli],
+  providers: [
+    AuthGuard, 
+    AuthService, 
+    SingletonRouterService, { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } }
+  ],
+  entryComponents: [
+    ModalNotCadastroComponent, 
+    ModalCadastroConcluidoComponent, 
+    ContentComponent, 
+    ContentComponentDialog, 
+    ClientesComponent, 
+    ClientesComponentModalDeletar, 
+    ClientesComponentModalAlterar,
+    TelefonesComponentModalAlterar, 
+    TelefonesComponentModalCadastrar, 
+    TelefonesComponentModalDeletar, 
+    EnderecosComponentModalDeletar,
+    EnderecosComponentModalCadastrar,
+    EnderecosComponentModalAlterar,
+  ],
+  bootstrap: [
+    AppComponent, 
+    ContentComponentDialog, 
+    ClientesComponent,
+    ClientesComponentModalDeletar,
+    ClientesComponentModalAlterar, 
+    TelefonesComponentModalAlterar, 
+    TelefonesComponentModalCadastrar, 
+    TelefonesComponentModalDeletar, 
+    EnderecosComponentModalCadastrar, 
+    EnderecosComponentModalDeletar,
+    EnderecosComponentModalAlterar,
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

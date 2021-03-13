@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material';
 import { SingletonRouterService } from '../services/singletonRouter.service';
 
@@ -16,7 +16,6 @@ export class AppComponent implements OnInit  {
     public dialog: MatDialog,
     private singletonService: SingletonRouterService) {
   }
-  // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit() {
     this.isShow = this.singletonService.getCredentials();
   }

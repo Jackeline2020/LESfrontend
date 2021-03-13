@@ -12,46 +12,9 @@
     width: 18rem; 
     margin-right: 50px; 
     margin-top: 80px;
+    height: 436px!important;
 }
 
-.wrapper-content h1 {
-	font-size: 60pt;
-	color: #fff;
-	text-shadow: 2px 2px #333;
-	font-family: 'Crete Round', serif !important;
-}
-
-.tag {
-	font-size: 90pt;
-    color: chocolate;
-    font-weight: bold;
-    position: absolute;
-    left: -58px;
-	bottom: -39px;
-	text-shadow: 2px 2px #333;
-}
-
-.bg_img{
-	right: 0; 
-	bottom: 0;
-	min-width: 100%; 
-	min-height: 100%;
-	width: auto; 
-	height: auto; 
-	z-index: -1000;
-	background: url('https://github.com/daniloagostinho/traning-book/blob/master/src/assets/images/bg_banking.png?raw=true') no-repeat;
-	background-size: cover; 
-}
-.btn-home-cadastro-clientes {
-    position: absolute !important;
-    top: 390px;
-    padding: 20px;
-    font-size: 25px;
-    width: 40%;
-    background: #000;
-    color: #fff;
-    border: 2px solid;
-}
 .btn-primary{
     min-width: 100px!important;
 }
@@ -61,6 +24,3 @@
 .conteudo{
     min-height: 650px;
 } /* colocar em todas as paginas */
-.card{
-    height: 436px!important;
-}

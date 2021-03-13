@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
     const emailPersistido = this.getCadastro['email'];
     const emailDigitado = this.formLogin.get('email').value;
     if (senhaPersistido === senhaDigitado && emailPersistido === emailDigitado) {
-      this.router.navigate(['home-logada']);
+      this.router.navigate(['clientes']);
     } else {
       this.openDialog();
     }
@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(ModalNotCadastroComponent, {
-      height: '350px'
+      height: '120px'
     });
 
     dialogRef.afterClosed().subscribe(result => {

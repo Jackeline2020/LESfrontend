@@ -1,0 +1,12 @@
+<h5 class="card-title">TELEFONES</h5>
+<form class="mt-4" (ngSubmit)='cadastro()' [formGroup]='formCadastro'>
+<div class="form-row">
+  <div class="col-md-3 mb-3">
+    <input type="text" class="form-control" placeholder="DDD" formControlName='ddd' maxlength="4" mask="(00)">
+  </div>
+  <div class="col-md-9 mb-3">
+    <input type="text" class="form-control" placeholder="Celular" formControlName='telefone' maxlength="14" mask="00000-0000">
+  </div>
+  <button type="submit" class="btn btn-primary bt-cadastro">Alterar</button>
+</div>
+</form>
