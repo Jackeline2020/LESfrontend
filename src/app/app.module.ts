@@ -1,19 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule} from '@angular/material/card';
 import { MatDialogModule} from '@angular/material/dialog';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
-
-import { SingletonRouterService } from '../services/singletonRouter.service';
-
-import { AuthGuard } from './../../auth.guard';
-import { AuthService } from './../../auth.service';
-
-import { ModalCadastroConcluidoComponent } from './modal-cadastro-concluido/modal-concluido.component';
-import { ModalNotCadastroComponent } from './modal-not-cadastro/modal-not-cadastro.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './routing/routing.module';
@@ -42,8 +34,6 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     ClientesComponentModalDeletar,
     ClientesComponentModalAlterar,
 
-    ModalCadastroConcluidoComponent,
-    ModalNotCadastroComponent,
     LoginComponent,
 
     TelefonesComponent,
@@ -57,6 +47,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     EnderecosComponentModalAlterar,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatDialogModule,
@@ -65,14 +56,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     MatCardModule,
     NgxMaskModule.forRoot()
   ],
-  providers: [
-    AuthGuard, 
-    AuthService, 
-    SingletonRouterService, { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } }
-  ],
+  providers: [],
   entryComponents: [
-    ModalNotCadastroComponent, 
-    ModalCadastroConcluidoComponent, 
     ContentComponent, 
     ContentComponentDialog, 
     ClientesComponent, 

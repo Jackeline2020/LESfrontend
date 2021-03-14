@@ -1,5 +1,5 @@
 import { Cidades } from "./Cidades";
-import { Clientes } from "./clientes";
+import { Cliente } from "./Cliente";
 import { tipoEnderecos } from "./tipoEnderecos";
 
 export class Enderecos {
@@ -10,6 +10,6 @@ export class Enderecos {
   bairro: string;
   complemento: string;
   cidade_id: Cidades;
-  cliente_id: Clientes;
+  cliente_id: Cliente;
   tipo_enderecos_id: tipoEnderecos;
 }

@@ -1,10 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { debounceTime } from 'rxjs/operators';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material';
-import { Router } from '@angular/router';
-import { ModalNotCadastroComponent } from '../modal-not-cadastro/modal-not-cadastro.component';
-import { ModalCadastroConcluidoComponent } from '../modal-cadastro-concluido/modal-concluido.component';
+import { OperationDialogComponent } from '../operation-dialog/operation-dialog.component';
+import { ClienteService } from '../../services/cliente.service';
 
 @Component({
   selector: 'app-cadastro-clientes',
@@ -12,32 +10,65 @@ import { ModalCadastroConcluidoComponent } from '../modal-cadastro-concluido/mod
   styleUrls: ['./cadastro-clientes.component.css']
 })
 export class CadastroClientesComponent implements OnInit {
-  formCadastro;
-  getCadastro;
-  valoresForm: Object;
-  conversao;
+  
+  public clienteForm: FormGroup;
+
   constructor(
-    private fb: FormBuilder,
-    public dialog: MatDialog,
-    private router: Router) { }
+    private formBuilder: FormBuilder,
+    public clienteService: ClienteService,
+    private dialog: MatDialog,
+    public cdRef: ChangeDetectorRef
+  ) { }
 
   ngOnInit() {
-    this.formCadastro = this.fb.group({
-      nome: [''],
-      email: [''],
-      senha: [''],
-      confirmaSenha: ['']
-    });
-  
-    this.formCadastro.valueChanges.pipe(
-      debounceTime(1000))
-      .subscribe(res => {
-        console.log(res);
-        this.valoresForm = res;
-      });
+    this.createForm();
   }
 
-  openDialog() {
+  createForm(){
+    this.clienteForm = this.formBuilder.group({
+      nome: [null, [Validators.required]],
+      email: [null, [Validators.required]],
+      senha: [null, [Validators.required]],
+      confirmaSenha: [null, [Validators.required]]
+    });
+  }
+
+  onAddCliente() {
+    if (this.clienteForm.valid) {
+      this.clienteService.postCliente(this.clienteForm.value).pipe()
+      .subscribe(dados => {
+        this.onConfirmAdd(dados);
+      });
+    }
+    }
+
+  onConfirmAdd(result: String): void {
+    const dialogConfirm = this.dialog.open(OperationDialogComponent, {
+      data: {
+        operation: 'Cadastro',
+        message: result
+      }
+    });
+    dialogConfirm.afterClosed().subscribe(closed => { 
+      window.location.reload();
+    });
+  }  
+}
+
+/* const senha = this.clienteForm.get('senha').value;
+    const confirmaSenha = this.clienteForm.get('confirmaSenha').value;
+    if (senha !== confirmaSenha) {
+      this.openDialog();
+    }else{
+        localStorage.setItem('cadastro', this.conversao);
+        if (localStorage.getItem('cadastro')) {
+          this.openDialogSuccess();
+          this.router.navigate(['login']);
+        }
+      }
+
+
+      openDialog() {
     const dialogRef = this.dialog.open(ModalNotCadastroComponent, {
       height: '120px'
     });
@@ -56,21 +87,4 @@ export class CadastroClientesComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-
-  cadastro() {
-    this.conversao = JSON.stringify(this.valoresForm);
-    console.log(this.conversao);
-    const senha = this.formCadastro.get('senha').value;
-    const confirmaSenha = this.formCadastro.get('confirmaSenha').value;
-    if (senha !== confirmaSenha) {
-      this.openDialog();
-    }else{
-        localStorage.setItem('cadastro', this.conversao);
-        if (localStorage.getItem('cadastro')) {
-          // TODO REDIRECIIONAR PARA PAGINA DE CADASTRO CONCLUIDO
-          this.openDialogSuccess();
-          this.router.navigate(['login']);
-        }
-      }
-    }
-}
+*/

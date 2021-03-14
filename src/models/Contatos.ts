@@ -1,8 +1,8 @@
-import { Clientes } from "./clientes";
+import { Cliente } from "./Cliente";
 
 export class Contatos {
     id: number;
     ddd: string;
     numero: string;
-    cliente_id: Clientes;
+    cliente_id: Cliente;
 }

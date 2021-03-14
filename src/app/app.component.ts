@@ -1,32 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material';
-import { SingletonRouterService } from '../services/singletonRouter.service';
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit  {
+export class AppComponent {
   title = 'app';
-  isShow: boolean;
-  data = false;
-  constructor(
-    public dialog: MatDialog,
-    private singletonService: SingletonRouterService) {
-  }
-  ngOnInit() {
-    this.isShow = this.singletonService.getCredentials();
-  }
-  openDialog() {
-    const dialogRef = this.dialog.open(AppComponent, {
-      height: '350px'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
-
 }

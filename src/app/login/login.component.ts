@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ModalNotCadastroComponent } from '../modal-not-cadastro/modal-not-cadastro.component';
 import { MatDialog } from '@angular/material';
 
 @Component({
@@ -42,24 +41,13 @@ export class LoginComponent implements OnInit {
   }
   login() {
     this.getCadastro = JSON.parse(localStorage.getItem('cadastro'));
-    const senhaPersistido = this.getCadastro['senha'];
+    /*const senhaPersistido = this.getCadastro['senha'];
     const senhaDigitado = this.formLogin.get('senha').value;
     const emailPersistido = this.getCadastro['email'];
     const emailDigitado = this.formLogin.get('email').value;
-    if (senhaPersistido === senhaDigitado && emailPersistido === emailDigitado) {
+    if (senhaPersistido === senhaDigitado && emailPersistido === emailDigitado) {*/
       this.router.navigate(['clientes']);
-    } else {
-      this.openDialog();
-    }
   }
-
-  openDialog() {
-    const dialogRef = this.dialog.open(ModalNotCadastroComponent, {
-      height: '120px'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
+  
 }
+

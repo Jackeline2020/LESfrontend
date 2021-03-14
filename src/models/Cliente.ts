@@ -1,10 +1,10 @@
 import { tipoClientes } from "./tipoClientes";
 
-export class Clientes {
-  id: number;
+export class Cliente {
+  clienteId: number;
   nome: string;
   email: string;
   senha: string;
   confirma_senha: string;
-  tipo_cliente_id: tipoClientes;
+  tipo_cliente_id?: tipoClientes;
 }

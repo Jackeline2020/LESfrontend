@@ -1,4 +1,4 @@
-import { Clientes } from "./clientes";
+import { Cliente } from "./Cliente";
 import { tipoDocumentos } from "./tipoDocumentos";
 
 export class Documentos {
@@ -6,5 +6,5 @@ export class Documentos {
     numero: string;
     validade: string;
     tipo_documento_id: tipoDocumentos;
-    cliente_id: Clientes;
+    cliente_id: Cliente;
 }
