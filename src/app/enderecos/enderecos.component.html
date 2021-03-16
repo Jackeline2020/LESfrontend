@@ -1,4 +1,5 @@
 <div class="conteudo">
+
   <a href="../clientes/">
     <button type="button" class="btn btn-primary stepp">Minha Conta</button>
   </a>
@@ -7,6 +8,12 @@
   </a>
   <a href="../enderecos/">
   <button type="button" class="btn btn-primary stepp">Meus Enderecos</button>  
+  </a>
+  <a href="../cartoes/">
+    <button type="button" class="btn btn-primary stepp">Meus Cartões</button>  
+  </a>
+  <a href="../pedidos/">
+    <button type="button" class="btn btn-primary stepp">Meus Pedidos</button>  
   </a>
 
   <!--enderecos-->
@@ -21,14 +28,13 @@
       <th>Complemento</th>
       <th>Cidade</th>
       <th>Estado</th>
-      <th>Adicionar</th>
       <th>Alterar</th>
       <th>Deletar</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>{{tipoEndereco}}</td>
+      <td>{{tipoLogradouro}}</td>
       <td>{{cep}}</td>
       <td>{{logradouro}}</td>
       <td>{{numero}}</td>
@@ -37,18 +43,55 @@
       <td>{{cidade}}</td>
       <td>{{estado}}</td>
       <td>
-        <button class="btn btn-link" mat-button (click)="openDialogCadastrar()">
-        <span class="material-icons">add_circle</span></button>
+        <button class="btn btn-link" mat-button (click)="openDialogAlterar()">
+        <span class="material-icons">mode_edit_outline</span></button>
       </td>
+      <td>
+        <button type="button" class="btn btn-link" data-dismiss="modal" mat-button (click)="openDialogDeletar()">
+        <span class="material-icons delete">delete</span></button>
+      </td>
+    </tr>
+    <tr>
+      <td>{{tipoLogradouro}}</td>
+      <td>{{cep}}</td>
+      <td>{{logradouro}}</td>
+      <td>{{numero}}</td>
+      <td>{{bairro}}</td>
+      <td>{{complemento}}</td>
+      <td>{{cidade}}</td>
+      <td>{{estado}}</td>
       <td>
         <button class="btn btn-link" mat-button (click)="openDialogAlterar()">
         <span class="material-icons">mode_edit_outline</span></button>
       </td>
       <td>
         <button type="button" class="btn btn-link" data-dismiss="modal" mat-button (click)="openDialogDeletar()">
-        <span class="material-icons">delete</span></button>
+        <span class="material-icons delete">delete</span></button>
+      </td>
+    </tr>
+    <tr>
+      <td>{{tipoLogradouro}}</td>
+      <td>{{cep}}</td>
+      <td>{{logradouro}}</td>
+      <td>{{numero}}</td>
+      <td>{{bairro}}</td>
+      <td>{{complemento}}</td>
+      <td>{{cidade}}</td>
+      <td>{{estado}}</td>
+      <td>
+        <button class="btn btn-link" mat-button (click)="openDialogAlterar()">
+        <span class="material-icons">mode_edit_outline</span></button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-link" data-dismiss="modal" mat-button (click)="openDialogDeletar()">
+        <span class="material-icons delete">delete</span></button>
       </td>
     </tr>
   </tbody>
 </table>
+
+<button class="btn btn-link cad-button" mat-button (click)="openDialogCadastrar()">
+  <span class="material-icons cad-span">add_circle</span>
+</button>
+
 </div>

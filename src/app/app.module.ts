@@ -18,6 +18,8 @@ import { ContentComponent, ContentComponentDialog } from './content/content.comp
 import { ClientesComponent, ClientesComponentModalDeletar, ClientesComponentModalAlterar  } from './clientes/clientes.component';
 import { TelefonesComponent, TelefonesComponentModalAlterar, TelefonesComponentModalCadastrar, TelefonesComponentModalDeletar } from './telefones/telefones.component';
 import { EnderecosComponent, EnderecosComponentModalCadastrar, EnderecosComponentModalDeletar, EnderecosComponentModalAlterar } from './enderecos/enderecos.component';
+import { CartoesComponent, CartoesComponentModalAlterar, CartoesComponentModalCadastrar, CartoesComponentModalDeletar } from './cartoes/cartoes.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -45,6 +47,13 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     EnderecosComponentModalCadastrar,
     EnderecosComponentModalDeletar,
     EnderecosComponentModalAlterar,
+
+    CartoesComponent,
+    CartoesComponentModalAlterar,
+    CartoesComponentModalCadastrar,
+    CartoesComponentModalDeletar,
+
+    PedidosComponent,
   ],
   imports: [
     HttpClientModule,
@@ -69,6 +78,9 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     EnderecosComponentModalDeletar,
     EnderecosComponentModalCadastrar,
     EnderecosComponentModalAlterar,
+    CartoesComponentModalAlterar,
+    CartoesComponentModalCadastrar,
+    CartoesComponentModalDeletar
   ],
   bootstrap: [
     AppComponent, 
@@ -82,6 +94,9 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     EnderecosComponentModalCadastrar, 
     EnderecosComponentModalDeletar,
     EnderecosComponentModalAlterar,
+    CartoesComponentModalAlterar,
+    CartoesComponentModalCadastrar,
+    CartoesComponentModalDeletar
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

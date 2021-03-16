@@ -24,9 +24,16 @@
       <li class="nav-item active col-auto">
         <a class="nav-link" routerLink="login"><span class="material-icons"> local_grocery_store </span></a>
       </li>
-      <li class="nav-item active col-auto">
-        <a class="nav-link" routerLink="login"><span class="material-icons"> account_circle </span> </a>
-      </li>
+      <div class="dropdown">
+        <li class="nav-item active col-auto">
+          <a class="nav-link item-drop col-6" routerLink="login">
+            <span class="material-icons"> account_circle </span>
+          </a>
+          <div class="dropdown-content div-drop">
+            <a class="nav-link" routerLink="/"><span class="material-icons">logout</span> Logout </a>
+          </div>
+        </li>
+      </div>
     </ul>
 
     <form class="form-inline" [formGroup]="formSearch" (ngSubmit)="search()">

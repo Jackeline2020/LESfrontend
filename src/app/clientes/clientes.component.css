@@ -4,7 +4,7 @@
 } /* colocar em todas as paginas */
 
 .stepp{
-  margin-left: 14%;
+  margin-left: 5%;
   margin-right: 2%;
   padding: 8px 18px; 
   vertical-align: middle; 
@@ -21,4 +21,24 @@
 
 .table{
   margin-top: 5%;
+}
+
+.cad-button{
+  margin-top: 15%;
+  margin-left: 47%;
+  color:red;
+}
+
+.cad-span{
+  font-size: 35px!important;
+}
+
+.delete{
+  color: red;
+  font-size: 40px;
+}
+
+.btn-del{
+  min-width: 100px;
+  margin-left: 7px;
 }

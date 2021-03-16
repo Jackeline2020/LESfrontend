@@ -19,45 +19,60 @@
   <table class="table">
     <thead>
       <tr>
-        <th>DDD</th>
-        <th>Celular</th>
+        <th>Número</th>
+        <th>Validade</th>
+        <th>Nome</th>
+        <th>Bandeira</th>
+        <th>Código de Segurança</th>
         <th>Alterar</th>
         <th>Deletar</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{{ddd}}</td>
-        <td>{{telefone}}</td>
+        <td>{{numero}}</td>
+        <td>{{Validade}}</td>
+        <td>{{nome}}</td>
+        <td>{{bandeira}}</td>
+        <td>{{codigo}}</td>
         <td>
           <button class="btn btn-link" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button>
         </td>
         <td>
-          <button class="btn btn-link delete" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
+          <button class="btn btn-link" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
         </td>
       </tr>
       <tr>
-        <td>{{ddd}}</td>
-        <td>{{telefone}}</td>
+        <td>{{numero}}</td>
+        <td>{{Validade}}</td>
+        <td>{{nome}}</td>
+        <td>{{bandeira}}</td>
+        <td>{{codigo}}</td>
         <td>
           <button class="btn btn-link" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button>
         </td>
         <td>
-          <button class="btn btn-link delete" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
+          <button class="btn btn-link" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
         </td>
-      </tr><tr>
-        <td>{{ddd}}</td>
-        <td>{{telefone}}</td>
+      </tr>
+      <tr>
+        <td>{{numero}}</td>
+        <td>{{Validade}}</td>
+        <td>{{nome}}</td>
+        <td>{{bandeira}}</td>
+        <td>{{codigo}}</td>
         <td>
           <button class="btn btn-link" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button>
         </td>
         <td>
-          <button class="btn btn-link delete" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
+          <button class="btn btn-link" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
         </td>
       </tr>
     </tbody>
   </table>
+
   <button class="btn btn-link cad-button" mat-button (click)="openDialogCadastrar()">
     <span class="material-icons cad-span">add_circle</span>
   </button>
+
 </div>

@@ -1,13 +1,20 @@
 <div class="conteudo">
-    <a href="../clientes/">
-      <button type="button" class="btn btn-primary stepp">Minha Conta</button>
-    </a>
-    <a href="../telefones/">
-    <button type="button" class="btn btn-primary stepp">Meus Telefones</button>
-    </a>
-    <a href="../enderecos/">
-    <button type="button" class="btn btn-primary stepp">Meus Enderecos</button>  
-    </a>
+
+  <a href="../clientes/">
+    <button type="button" class="btn btn-primary stepp">Minha Conta</button>
+  </a>
+  <a href="../telefones/">
+  <button type="button" class="btn btn-primary stepp">Meus Telefones</button>
+  </a>
+  <a href="../enderecos/">
+  <button type="button" class="btn btn-primary stepp">Meus Enderecos</button>  
+  </a>
+  <a href="../cartoes/">
+    <button type="button" class="btn btn-primary stepp">Meus Cartões</button>  
+  </a>
+  <a href="../pedidos/">
+    <button type="button" class="btn btn-primary stepp">Meus Pedidos</button>  
+  </a>
 
 <table class="table">
   <thead>
@@ -31,7 +38,9 @@
   </tbody>
 </table>
 
-<button class="btn btn-danger danger" mat-button (click)="openDialogDeletar()"> deletar sua conta
-  <span class="material-icons"> delete_forever </span> <br>
+<button type="button" class="btn btn-link cad-button" data-dismiss="modal" mat-button (click)="openDialogDeletar()">
+  <span class="material-icons delete">delete</span>
+  <p><b>Deletar Conta</b></p>
 </button>
+
 </div>
