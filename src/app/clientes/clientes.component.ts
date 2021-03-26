@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { FormBuilder } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
+import { ClienteService } from '../../services/cliente.service';
+import { Cliente } from '../../models/Cliente';
+import { OperationDialogComponent } from '../operation-dialog/operation-dialog.component';
 
 @Component({
   selector: 'app-clientes',
@@ -9,10 +13,60 @@ import { debounceTime } from 'rxjs/operators';
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent implements OnInit {
-  getCadastro;
-  nomeCompleto; email; cpf;
-  constructor(public dialog: MatDialog) { }
 
+  public clienteForm: FormGroup;
+  cliente = new Cliente();
+  clienteId: number;
+
+  constructor(
+    public formBuilder: FormBuilder,
+    public clienteService: ClienteService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private dialog: MatDialog,
+    private cdRef: ChangeDetectorRef
+  ) { }
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.clienteId = + params['id'];
+    })
+    this.findCliente(this.clienteId);
+  }
+  
+ /* createFormCliente(){
+    this.clienteForm = this.formBuilder.group({
+      nome: [null, [Validators.required]],
+      email: [null, [Validators.required]],
+      senha: [null, [Validators.required]],
+      confirmaSenha: [null, [Validators.required]]
+    });
+  } */
+
+  findCliente(cliente_id: number) {
+    this.clienteService.findClienteById(cliente_id).subscribe(data => {
+      if (data != null) {
+        this.cliente = data;
+        this.onLoadForm(data);
+      }
+    });
+    this.cdRef.detectChanges;
+  }
+
+  onLoadForm(cliente: Cliente) {
+    this.onSetCliente(cliente);
+  }
+
+  onSetCliente(cliente: Cliente) {
+    if (cliente != null) {
+      this.clienteForm.patchValue({
+        nome: cliente.nome,
+        email: cliente.email,
+        senha: cliente.senha
+      });
+    }
+  }
+  
   openDialogAlterar() {
     this.dialog.open(ClientesComponentModalAlterar);
   }
@@ -21,13 +75,6 @@ export class ClientesComponent implements OnInit {
     this.dialog.open(ClientesComponentModalDeletar);
   }
 
-  ngOnInit() {
-    this.getCadastro = JSON.parse(localStorage.getItem('cadastro'));
-    this.nomeCompleto = this.getCadastro['nome'];
-    this.email = this.getCadastro['email'];
-    this.cpf = this.getCadastro['cpf'];
-  }
-  
 }
 
 @Component({
@@ -37,41 +84,53 @@ export class ClientesComponent implements OnInit {
 })
 
 export class ClientesComponentModalAlterar {
-  formCadastro;
-  getCadastro;
-  valoresForm: Object;
-  conversao;
-  id; nomeCompleto; email; cpf;
+  public clienteForm: FormGroup;
+  clienteId: number;
+  cliente = new Cliente();
+
   constructor(
-    private fb: FormBuilder) { }
+    public formBuilder: FormBuilder,
+    public clienteService: ClienteService,
+    private router: Router,
+    private dialog: MatDialog
+  ) { }
 
-  ngOnInit() {
-    this.formCadastro = this.fb.group({
-      nome: [''],
-      email: [''],
-      cpf: ['']
-    });
+  ngOnInit() {};
 
-    this.formCadastro.valueChanges.pipe(
-      debounceTime(1000))
-      .subscribe(res => {
-        console.log(res);
-        this.valoresForm = res;
-    });
-
-    this.getCadastro = JSON.parse(localStorage.getItem('cadastro'));
-    this.nomeCompleto = this.getCadastro['nome'];
-    this.email = this.getCadastro['email'];
-    this.cpf = this.getCadastro['cpf'];
+  onAtualizarCliente(clienteId: number) {
+    /*const documentoForm: Documento = {
+      cpf: this.clienteForm.get('cpf')?.value,
+      cliente_id: this.clienteId
+    } */
+    const cliente: Cliente = {  
+      id: this.clienteId,
+      nome: this.clienteForm.get['nome'],
+      email: this.clienteForm.get['email'],
+      senha: this.clienteForm.get['senha'],
+      tipoId: this.clienteForm.get['tipoId']
+      };
+    if (this.clienteForm.valid) {
+      this.clienteService.updateCliente(cliente, clienteId)
+        .subscribe(result => {
+          this.onShowDialog(result, 'Atualizar', '/clientes');
+        })
+    }
   }
 
-  cadastro() {
-    this.conversao = JSON.stringify(this.valoresForm);
-    console.log(this.conversao);
-    localStorage.setItem('cadastro', this.conversao);
+    onShowDialog(result: String, operation: String, destination: String): void {
+      const dialogRef = this.dialog.open(OperationDialogComponent, {
+        data: {
+          operation: operation,
+          message: result
+        }
+      });
+      dialogRef.afterClosed().subscribe(closed => {
+        this.router.navigate([destination]);
+      });
+    }
   }
   
-}
+
 
 @Component({
   selector: 'app-clientes',
@@ -79,4 +138,31 @@ export class ClientesComponentModalAlterar {
   styleUrls: ['./clientes.component.css']
 })
 
-export class ClientesComponentModalDeletar {}
+export class ClientesComponentModalDeletar {
+  clienteId: number;
+
+  constructor(
+    public formBuilder: FormBuilder,
+    public clienteService: ClienteService,
+    private router: Router,
+    private dialog: MatDialog
+  ) { }
+
+  onDeleteCliente(clienteId: number): void {
+    this.clienteService.deleteCliente(clienteId).subscribe(result => {
+      this.onShowDialog(result, 'Excluir', '/clientes');
+    });
+  }
+  
+  onShowDialog(result: String, operation: String, destination: String): void {
+    const dialogRef = this.dialog.open(OperationDialogComponent, {
+      data: {
+        operation: operation,
+        message: result
+      }
+    });
+    dialogRef.afterClosed().subscribe(closed => {
+      this.router.navigate([destination]);
+    });
+  }
+}

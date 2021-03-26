@@ -19,8 +19,14 @@
               <input type="password" class="form-control" placeholder="Senha" formControlName='senha' name="senha">
             </div>
             <div class="col-md-6 mb-3">
-              <input type="password" class="form-control" placeholder="Confirma Senha" formControlName='confirmaSenha' name="confirmaSenha">
+              <select formControlName="tipoId" name="tipoId" class="form-control">
+                <option value="1">Pessoa Fisica</option>
+                <option value="2">Pessoa Juridica</option>
+              </select>
             </div>
+            <!--div class="col-md-6 mb-3">
+              <input type="password" class="form-control" placeholder="Confirma Senha" formControlName='confirmaSenha' name="confirmaSenha">
+            </div-->
           </div>
           <button mat-button class="btn btn-primary" (click)="onAddCliente()">Cadastrar</button>
         </form>

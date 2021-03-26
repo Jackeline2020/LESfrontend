@@ -20,6 +20,8 @@ import { TelefonesComponent, TelefonesComponentModalAlterar, TelefonesComponentM
 import { EnderecosComponent, EnderecosComponentModalCadastrar, EnderecosComponentModalDeletar, EnderecosComponentModalAlterar } from './enderecos/enderecos.component';
 import { CartoesComponent, CartoesComponentModalAlterar, CartoesComponentModalCadastrar, CartoesComponentModalDeletar } from './cartoes/cartoes.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
+import { ProdutosComponent } from './produtos/produtos.component';
+import { OperationDialogComponent } from './operation-dialog/operation-dialog.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -54,6 +56,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     CartoesComponentModalDeletar,
 
     PedidosComponent,
+    ProdutosComponent,
+    OperationDialogComponent
   ],
   imports: [
     HttpClientModule,
@@ -80,7 +84,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     EnderecosComponentModalAlterar,
     CartoesComponentModalAlterar,
     CartoesComponentModalCadastrar,
-    CartoesComponentModalDeletar
+    CartoesComponentModalDeletar,
+    OperationDialogComponent
   ],
   bootstrap: [
     AppComponent, 
@@ -96,7 +101,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     EnderecosComponentModalAlterar,
     CartoesComponentModalAlterar,
     CartoesComponentModalCadastrar,
-    CartoesComponentModalDeletar
+    CartoesComponentModalDeletar,
+    OperationDialogComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

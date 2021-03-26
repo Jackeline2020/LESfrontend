@@ -1,0 +1,40 @@
+<div class="row conteudo">
+  <div class="col-sm-5 card-cad">
+    <div class="card">
+      <div class="card-body">
+        <form class="mt-6"  [formGroup]='produtoForm'>
+          <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="Descrição" formControlName='descricao' name="descricao">
+              </div>
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="Valor" formControlName='valor' name="valor">
+              </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Marca" formControlName='marca' name="marca">
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Modelo" formControlName='modelo' name="modelo">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Conteudo Embalagem" formControlName='conteudoEmbalagem' name="conteudoEmbalagem">
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Garantia" formControlName='garantia' name="garantia">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Peso" formControlName='peso' name="peso">
+            </div>
+          </div>
+          <button mat-button class="btn btn-primary" (click)="onAddProduto()">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

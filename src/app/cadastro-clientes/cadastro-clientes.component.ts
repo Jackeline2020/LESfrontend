@@ -21,15 +21,15 @@ export class CadastroClientesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.createForm();
+    this.createFormCliente();
   }
 
-  createForm(){
+  createFormCliente(){
     this.clienteForm = this.formBuilder.group({
       nome: [null, [Validators.required]],
       email: [null, [Validators.required]],
       senha: [null, [Validators.required]],
-      confirmaSenha: [null, [Validators.required]]
+      tipoId: [null, [Validators.required]],
     });
   }
 

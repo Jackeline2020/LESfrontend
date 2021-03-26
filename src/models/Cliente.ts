@@ -1,10 +1,9 @@
-import { tipoClientes } from "./tipoClientes";
+import { tipoCliente } from "./tipoCliente";
 
 export class Cliente {
-  clienteId: number;
+  id: number;
   nome: string;
   email: string;
   senha: string;
-  confirma_senha: string;
-  tipo_cliente_id?: tipoClientes;
+  tipoId: tipoCliente;
 }

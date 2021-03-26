@@ -1,8 +1,8 @@
 <h5 class="card-title">Deseja realmente deletar sua conta?</h5>
-<form class="mt-4" (ngSubmit)='cadastro()' [formGroup]='formCadastro'>
+<form class="mt-4" [formGroup]='clienteForm'>
 <div class="form-row">
     <div class="col-md-6">
-        <button type="button" class="btn btn-danger btn-del" mat-dialog-close>OK</button>
+        <button class="btn btn-danger btn-del" mat-button (click)="onDeleteCliente(this.clienteId)">OK</button>
     </div>
     <div class="col-md-6">
         <button type="button" class="btn btn-primary btn-del" mat-dialog-close>Cancelar</button>
