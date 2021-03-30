@@ -1,0 +1,21 @@
+<h5 class="card-title">Documentos</h5>
+<form class="mt-4" (ngSubmit)='cadastro()' [formGroup]='formCadastro'>
+  <div class="form-row">
+    <div class="col-md-12 mb-3">
+      <select formControlName="tipo" class="form-control">
+        <option value="1" selected>CPF</option>
+        <option value="2">CNPJ</option>
+        <option value="2">RG</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+      <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" placeholder="Número" formControlName='numero' value="58.559.594-8">
+      </div>
+      <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" placeholder="Validade" formControlName='validade' value="25/08/2022">
+      </div>
+  </div>
+  <button type="submit" class="btn btn-primary bt-cadastro">Alterar</button>
+</form>

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Crete+Round|Poppins');
+
+.card-img-top {
+    width: 165px;
+    height: 200px;
+}
+
+.card {
+	margin-top: 2%;
+    left: 25%;
+    padding: 5px;
+    width: 45rem; 
+    margin-right: 50px; 
+    margin-top: 25px;
+    height: 563px!important;
+}
+
+.btn-primary{
+    min-width: 100px!important;
+}
+.material-icons{
+    font-size: 19px;
+}
+.conteudo{
+    min-height: 650px;
+} /* colocar em todas as paginas */

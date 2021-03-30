@@ -17,6 +17,7 @@ import { DocumentosComponent } from '../documentos/documentos.component';
 import { EstoqueComponent } from '../estoque/estoque.component';
 import { RankingComponent } from '../ranking/ranking.component';
 import { SolicitacoesComponent } from '../solicitacoes/solicitacoes.component';
+import { CarrinhoComponent } from '../carrinho/carrinho.component';
 
 const routes: Routes = [
   { path: '', component: ContentComponent },
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'estoque', component: EstoqueComponent},
   { path: 'ranking', component: RankingComponent},
   { path: 'solicitacoes', component: SolicitacoesComponent},
+  { path: 'carrinho', component: CarrinhoComponent},
 
 ];
 

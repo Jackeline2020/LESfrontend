@@ -1,0 +1,11 @@
+<h5 class="card-title">Deseja realmente deletar seu documento?</h5>
+<form class="mt-4" (ngSubmit)='cadastro()' [formGroup]='formCadastro'>
+<div class="form-row">
+    <div class="col-md-6">
+        <button type="button" class="btn btn-danger btn-del" mat-dialog-close>OK</button>
+    </div>
+    <div class="col-md-6">
+        <button type="button" class="btn btn-primary btn-del" mat-dialog-close>Cancelar</button>
+    </div>
+</div>
+</form>

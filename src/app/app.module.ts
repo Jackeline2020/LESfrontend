@@ -26,10 +26,11 @@ import { OperationDialogComponent } from './operation-dialog/operation-dialog.co
 import { CuponsComponent } from './cupons/cupons.component';
 import { CadastroProdutosComponent, ProdutosComponentModalCadastrar, ProdutosComponentModalAlterar } from './cadastro-produtos/cadastro-produtos.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
-import { DocumentosComponent } from './documentos/documentos.component';
+import { DocumentosComponent, DocumentosCadastrarComponent, DocumentosAlterarComponent, DocumentosDeletarComponent } from './documentos/documentos.component';
 import { EstoqueComponent } from './estoque/estoque.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { SolicitacoesComponent } from './solicitacoes/solicitacoes.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -76,10 +77,16 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     OperationDialogComponent,
     CuponsComponent,
     UsuariosComponent,
+
     DocumentosComponent,
+    DocumentosCadastrarComponent,
+    DocumentosAlterarComponent,
+    DocumentosDeletarComponent,
+
     EstoqueComponent,
     RankingComponent,
-    SolicitacoesComponent
+    SolicitacoesComponent,
+    CarrinhoComponent
   ],
   imports: [
     HttpClientModule,
@@ -112,7 +119,10 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     PedidosCancelarComponent,
     PedidosTrocarComponent,
     ProdutosComponentModalCadastrar,
-    ProdutosComponentModalAlterar
+    ProdutosComponentModalAlterar,
+    DocumentosCadastrarComponent,
+    DocumentosAlterarComponent,
+    DocumentosDeletarComponent,
   ],
   bootstrap: [
     AppComponent, 
@@ -133,7 +143,10 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     PedidosCancelarComponent,
     PedidosTrocarComponent,
     ProdutosComponentModalCadastrar,
-    ProdutosComponentModalAlterar
+    ProdutosComponentModalAlterar,
+    DocumentosCadastrarComponent,
+    DocumentosAlterarComponent,
+    DocumentosDeletarComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
