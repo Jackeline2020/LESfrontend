@@ -1,0 +1,26 @@
+<div class="row conteudo">
+    <div class="col-sm-5 offset-1 card-login">
+      <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Login Administrador</h5>
+          <form class="mt-4" [formGroup]='formLogin'>
+            <div class="form-row">
+              <div class="col-md-12 mb-3">
+                <input type="text" class="form-control" placeholder="E-mail" formControlName='email'>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12 mb-3">
+                <input type="password" class="form-control" placeholder="Senha" formControlName='senha'>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <button type="submit" class="btn btn-primary" (click)="login()">Acessar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

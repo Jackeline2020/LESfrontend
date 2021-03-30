@@ -1,0 +1,58 @@
+<div class="conteudo">
+
+  <a href="../clientes/">
+    <button type="button" class="btn btn-primary stepp">Minha Conta</button>
+  </a>
+  <a href="../telefones/">
+  <button type="button" class="btn btn-primary stepp">Telefones</button>
+  </a>
+  <a href="../enderecos/">
+  <button type="button" class="btn btn-primary stepp">Enderecos</button>  
+  </a>
+  <a href="../cartoes/">
+    <button type="button" class="btn btn-primary stepp">Cartões</button>  
+  </a>
+  <a href="../pedidos/">
+    <button type="button" class="btn btn-primary stepp">Pedidos</button>  
+  </a>
+  <a href="../cupons/">
+    <button type="button" class="btn btn-primary stepp">Cupons</button>  
+  </a>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Número</th>
+      <th>Validade</th>
+      <th>Alterar</th>
+      <th>Deletar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CPF</td>
+      <td>585.595.948-84</td>
+      <td>09/10/2021</td>
+      <td>
+        <button class="btn btn-link" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button>
+      </td>
+      <td>
+        <button class="btn btn-link delete" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
+      </td>
+    </tr>
+    <tr>
+      <td>RG</td>
+      <td>58.559.594-8</td>
+      <td>25/08/2022</td>
+      <td>
+        <button class="btn btn-link" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button>
+      </td>
+      <td>
+        <button class="btn btn-link delete" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>

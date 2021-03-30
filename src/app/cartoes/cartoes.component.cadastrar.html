@@ -1,0 +1,37 @@
+<h5 class="card-title">Cartão</h5>
+<form class="mt-4" (ngSubmit)='cadastro()' [formGroup]='formCadastro'>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Número" formControlName='numero' maxlength="19" mask="0000.0000.0000.0000">
+        </div>
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Validade" formControlName='validade' maxlength="5" mask="00/00">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <select formControlName='bandeira' class="form-control">
+              <option selected="" value="">Selecione a Bandeira</option>
+              <option value="1">Visa</option>
+              <option value="2">MasterCard</option>
+              <option value="3">Elo</option>
+              <option value="4">American Express</option>
+              <option value="5">Hipercard</option>
+            </select>
+        </div>
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Código de Segurança" formControlName='cod_seguranca' maxlength="3">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <input type="text" class="form-control" placeholder="CPF" formControlName='cpf' maxlength="14" mask="000.000.000-00">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <input type="text" class="form-control" placeholder="Nome" formControlName='nome'>
+        </div>
+    </div>
+<button type="submit" class="btn btn-primary bt-cadastro">Cadastrar</button>
+</form>

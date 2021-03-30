@@ -4,18 +4,20 @@
     <button type="button" class="btn btn-primary stepp">Minha Conta</button>
   </a>
   <a href="../telefones/">
-  <button type="button" class="btn btn-primary stepp">Meus Telefones</button>
+  <button type="button" class="btn btn-primary stepp">Telefones</button>
   </a>
-  <a href="../enderecos/">
-  <button type="button" class="btn btn-primary stepp">Meus Enderecos</button>  
+  <a href="../documentos/">
+  <button type="button" class="btn btn-primary stepp">Documentos</button>  
   </a>
   <a href="../cartoes/">
-    <button type="button" class="btn btn-primary stepp">Meus Cartões</button>  
+    <button type="button" class="btn btn-primary stepp">Cartões</button>  
   </a>
   <a href="../pedidos/">
-    <button type="button" class="btn btn-primary stepp">Meus Pedidos</button>  
+    <button type="button" class="btn btn-primary stepp">Pedidos</button>  
   </a>
-
+  <a href="../cupons/">
+    <button type="button" class="btn btn-primary stepp">Cupons</button>  
+  </a>
   <!--enderecos-->
 <table class="table">
   <thead>
@@ -33,7 +35,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <!--tr>
       <td>{{tipoLogradouro}}</td>
       <td>{{cep}}</td>
       <td>{{logradouro}}</td>
@@ -50,16 +52,16 @@
         <button type="button" class="btn btn-link" data-dismiss="modal" mat-button (click)="openDialogDeletar()">
         <span class="material-icons delete">delete</span></button>
       </td>
-    </tr>
+    </tr-->
     <tr>
-      <td>{{tipoLogradouro}}</td>
-      <td>{{cep}}</td>
-      <td>{{logradouro}}</td>
-      <td>{{numero}}</td>
-      <td>{{bairro}}</td>
-      <td>{{complemento}}</td>
-      <td>{{cidade}}</td>
-      <td>{{estado}}</td>
+      <td>Endereço de Entrega</td>
+      <td>8493-283</td>
+      <td>Travessa Francisco Barriga de Souza</td>
+      <td>18</td>
+      <td>Parque Ipê</td>
+      <td>--</td>
+      <td>São Paulo</td>
+      <td>São Paulo</td>
       <td>
         <button class="btn btn-link" mat-button (click)="openDialogAlterar()">
         <span class="material-icons">mode_edit_outline</span></button>
@@ -70,14 +72,14 @@
       </td>
     </tr>
     <tr>
-      <td>{{tipoLogradouro}}</td>
-      <td>{{cep}}</td>
-      <td>{{logradouro}}</td>
-      <td>{{numero}}</td>
-      <td>{{bairro}}</td>
-      <td>{{complemento}}</td>
-      <td>{{cidade}}</td>
-      <td>{{estado}}</td>
+      <td>Endereço de Cobrança</td>
+      <td>3849-284</td>
+      <td>Rua Carlos Mariguela</td>
+      <td>25</td>
+      <td>Jardim Odete 2</td>
+      <td>apartamento 32 B</td>
+      <td>Itaquaquecetuba</td>
+      <td>São Paulo</td>
       <td>
         <button class="btn btn-link" mat-button (click)="openDialogAlterar()">
         <span class="material-icons">mode_edit_outline</span></button>

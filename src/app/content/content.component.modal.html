@@ -1,14 +1,21 @@
 <h1 mat-dialog-title>Liquidificador Mondial</h1>
 <img class="card-img-top" src="/assets/img/liquidificador.png" alt="liquidificador">
-<br>
+<br><br>
+
 <div mat-dialog-content>
-  Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.
-  <br>
-  Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.
-  <br>
-  Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.
-  <br>
+  <p> Liquidificador Mondial Turbo Inox L-1200 3 Litros 12.</p><br>
+  <h5 class="card-title">R$100,00</h5>
+  <h3 class="card-title">Em até 3x de <b>R$33,30</b></h3><br>
+  <div class="form-row">
+    <div class="col-md-9 mb-3">
+      <input type="text" class="form-control" placeholder="CEP" formControlName='cep' maxlength="9" mask="00000-000">
+    </div>
+    <div class="col-md-3 mb-3">
+      <button type="button" class="btn btn-primary">Calcular</button>
+    </div>
+  </div>
 </div>
+
 <div class="modal-footer">
   <button type="button" class="btn btn-primary" mat-dialog-close>Fechar</button>
   <a class="nav-link" routerLink="cadastro-clientes">

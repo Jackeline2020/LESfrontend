@@ -1,0 +1,71 @@
+<h5 class="card-title">Produtos</h5>
+<form class="mt-6"  [formGroup]='produtoForm'>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Nome" formControlName='nome'>
+        </div>
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Preço" formControlName='preco'>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Quantidade" formControlName='quantidade'>
+        </div>
+        <div class="col-md-6 mb-3">
+            <select formControlName='status' class="form-control">
+            <option selected="" value="">Selecione o Status</option>
+            <option value="1">Ativado</option>
+            <option value="2">Desativado</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </div>
+<button mat-button class="btn btn-primary" (click)="onAddProduto()">Cadastrar</button>
+</form>
+
+<!--div class="row conteudo">
+    <div class="col-sm-5 card-cad">
+      <div class="card">
+        <div class="card-body">
+          <form class="mt-6"  [formGroup]='produtoForm'>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control" placeholder="Descrição" formControlName='descricao' name="descricao">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control" placeholder="Valor" formControlName='valor' name="valor">
+                </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="Marca" formControlName='marca' name="marca">
+              </div>
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="Modelo" formControlName='modelo' name="modelo">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="Conteudo Embalagem" formControlName='conteudoEmbalagem' name="conteudoEmbalagem">
+              </div>
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="Garantia" formControlName='garantia' name="garantia">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="Peso" formControlName='peso' name="peso">
+              </div>
+            </div>
+            <button mat-button class="btn btn-primary" (click)="onAddProduto()">Cadastrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div-->

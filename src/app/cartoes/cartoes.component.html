@@ -3,17 +3,20 @@
   <a href="../clientes/">
     <button type="button" class="btn btn-primary stepp">Minha Conta</button>
   </a>
+  <a href="../documentos/">
+    <button type="button" class="btn btn-primary stepp">Documentos</button>
+    </a>
   <a href="../telefones/">
-  <button type="button" class="btn btn-primary stepp">Meus Telefones</button>
+  <button type="button" class="btn btn-primary stepp">Telefones</button>
   </a>
   <a href="../enderecos/">
-  <button type="button" class="btn btn-primary stepp">Meus Enderecos</button>  
-  </a>
-  <a href="../cartoes/">
-    <button type="button" class="btn btn-primary stepp">Meus Cartões</button>  
+  <button type="button" class="btn btn-primary stepp">Enderecos</button>  
   </a>
   <a href="../pedidos/">
-    <button type="button" class="btn btn-primary stepp">Meus Pedidos</button>  
+    <button type="button" class="btn btn-primary stepp">Pedidos</button>  
+  </a>
+  <a href="../cupons/">
+    <button type="button" class="btn btn-primary stepp">Cupons</button>  
   </a>
 
   <table class="table">
@@ -23,13 +26,13 @@
         <th>Validade</th>
         <th>Nome</th>
         <th>Bandeira</th>
-        <th>Código de Segurança</th>
+        <th>CPF</th>
         <th>Alterar</th>
         <th>Deletar</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <!--tr>
         <td>{{numero}}</td>
         <td>{{Validade}}</td>
         <td>{{nome}}</td>
@@ -40,32 +43,32 @@
         </td>
         <td>
           <button class="btn btn-link" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
+        </td>
+      </tr-->
+      <tr>
+        <td>7374.8885.5489.5998</td>
+        <td>10/25</td>
+        <td>Flavio Daniel</td>
+        <td>Visa</td>
+        <td>833.848.593-62</td>
+        <td>
+          <button class="btn btn-link" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button>
+        </td>
+        <td>
+          <button class="btn btn-link delete" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
         </td>
       </tr>
       <tr>
-        <td>{{numero}}</td>
-        <td>{{Validade}}</td>
-        <td>{{nome}}</td>
-        <td>{{bandeira}}</td>
-        <td>{{codigo}}</td>
+        <td>7489.8885.5489.5998</td>
+        <td>08/23</td>
+        <td>Maria Carvalho</td>
+        <td>MasterCard</td>
+        <td>833.833.564-62</td>
         <td>
           <button class="btn btn-link" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button>
         </td>
         <td>
-          <button class="btn btn-link" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
-        </td>
-      </tr>
-      <tr>
-        <td>{{numero}}</td>
-        <td>{{Validade}}</td>
-        <td>{{nome}}</td>
-        <td>{{bandeira}}</td>
-        <td>{{codigo}}</td>
-        <td>
-          <button class="btn btn-link" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button>
-        </td>
-        <td>
-          <button class="btn btn-link" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
+          <button class="btn btn-link delete" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
         </td>
       </tr>
     </tbody>

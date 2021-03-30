@@ -1,45 +1,37 @@
-<h5 class="card-title">ENDEREÇOS</h5>
-<form class="mt-6" (ngSubmit)='cadastro()' [formGroup]='formCadastro'>
+<h5 class="card-title">ENDEREÇO</h5>
     <div class="form-row">
         <div class="col-md-6 mb-3">
           <select formControlName='tipoLogradouro' class="form-control">
-            <option selected="" value="">Selecione o Logradouro</option>
-            <option value="entrega">Endereço de Entrega</option>
-            <option value="cobranca">Endereço de Cobrança</option>
+            <option value="1" selected>Endereço de Entrega</option>
+            <option value="2">Endereço de Cobrança</option>
           </select>
         </div>
         <div class="col-md-6 mb-3">
-          <input type="text" class="form-control" placeholder="CEP" formControlName='cep' maxlength="9" mask="00000-000">
+          <input type="text" class="form-control" placeholder="CEP" formControlName='cep' value="8493-283">
         </div>
     </div>
     <div class="form-row">
         <div class="col-md-6 mb-3">
-          <input type="text" class="form-control" placeholder="Logradouro" formControlName='logradouro'>
+          <input type="text" class="form-control" placeholder="Logradouro" formControlName='logradouro' value="Travessa Francisco Barriga de Souza">
         </div>
         <div class="col-md-6 mb-3">
-          <input type="text" class="form-control" placeholder="Número" formControlName='numero'>
+          <input type="text" class="form-control" placeholder="Número" formControlName='numero' value="18">
         </div>
     </div>
     <div class="form-row">
         <div class="col-md-6 mb-3">
-          <input type="text" class="form-control" placeholder="Bairro" formControlName='bairro'>
+          <input type="text" class="form-control" placeholder="Bairro" formControlName='bairro' value="Parque Ipê">
         </div>
         <div class="col-md-6 mb-3">
-          <input type="text" class="form-control" placeholder="Complemento" formControlName='complemento'>
+          <input type="text" class="form-control" placeholder="Complemento" formControlName='complemento' value="--">
         </div>
     </div>
-    <!--div class="form-row">
-        <div class="col-md-12 mb-3">
-            <input type="text" class="form-control" placeholder="Tipo Endereço" formControlName='tipoEndereco'>
-        </div>
-    </div-->
     <div class="form-row">
       <div class="col-md-6 mb-3">
-        <input type="text" class="form-control" placeholder="Cidade" formControlName='cidade'>
+        <input type="text" class="form-control" placeholder="Cidade" formControlName='cidade' value="São Paulo">
       </div>
       <div class="col-md-6 mb-3">
         <select formControlName='estado' class="form-control">
-          <option selected="" value="">Selecione o Estado (UF)</option>
           <option value="Acre">Acre</option>
           <option value="Alagoas">Alagoas</option>
           <option value="Amapá">Amapá</option>
@@ -64,7 +56,7 @@
           <option value="Rondônia">Rondônia</option>
           <option value="Roraima">Roraima</option>
           <option value="Santa Catarina">Santa Catarina</option>
-          <option value="São Paulo">São Paulo</option>
+          <option value="São Paulo" selected>São Paulo</option>
           <option value="Sergipe">Sergipe</option>
           <option value="Tocantins">Tocantins</option>
         </select>
@@ -72,6 +64,4 @@
       <div class="col-md-6 mb-3">
         <button type="submit" class="btn btn-primary bt-cadastro">Alterar</button>
       </div>
-    </div>
-</form>
-            
+    </div>            

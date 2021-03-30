@@ -3,43 +3,99 @@
   <a href="../clientes/">
     <button type="button" class="btn btn-primary stepp">Minha Conta</button>
   </a>
+  <a href="../documentos/">
+    <button type="button" class="btn btn-primary stepp">Documentos</button>
+    </a>
   <a href="../telefones/">
-  <button type="button" class="btn btn-primary stepp">Meus Telefones</button>
+  <button type="button" class="btn btn-primary stepp">Telefones</button>
   </a>
   <a href="../enderecos/">
-  <button type="button" class="btn btn-primary stepp">Meus Enderecos</button>  
+  <button type="button" class="btn btn-primary stepp">Enderecos</button>  
   </a>
   <a href="../cartoes/">
-    <button type="button" class="btn btn-primary stepp">Meus Cartões</button>  
+    <button type="button" class="btn btn-primary stepp">Cartões</button>  
   </a>
-  <a href="../pedidos/">
-    <button type="button" class="btn btn-primary stepp">Meus Pedidos</button>  
+  <a href="../cupons/">
+    <button type="button" class="btn btn-primary stepp">Cupons</button>  
   </a>
+  
+<!--br><br><br>
 
-  <!--table class="table">
+  <h2 class="h"> PEDIDOS </h2-->
+        
+  <table class="table table-bordered">
     <thead>
       <tr>
-        <th>DDD</th>
-        <th>Celular</th>
-        <th>Cadastrar</th>
-        <th>Alterar</th>
-        <th>Deletar</th>
+        <th scope="col">#</th>
+        <th scope="col">Número do Pedido</th>
+        <th scope="col">Data</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Status</th>
+        <th scope="col">Solicitar</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{{ddd}}</td>
-        <td>{{telefone}}</td>
-        <td>
-          <button class="btn btn-link" mat-button (click)="openDialogCadastrar()"><span class="material-icons">add_ic_call</span></button>
-        </td>
-        <td>
-          <button class="btn btn-link" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button>
-        </td>
-        <td>
-          <button class="btn btn-link" mat-button (click)="openDialogDeletar()"><span class="material-icons">delete</span></button>
-        </td>
+        <th scope="row">1</th>
+        <td>8873483454894</td>
+        <td>15/03/2021</td>
+        <td>Microondas Eletrolux</td>
+        <td>1.500,00</td>
+        <td>Processando</td>
+        <td><button type="button" class="btn btn-danger" style="margin-left: 20%;" mat-button (click)="openDialogCancelar()">Cancelar Pedido</button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>8873483454895</td>
+        <td>01/03/2021</td>
+        <td>Geladeira Eletrolux</td>
+        <td>2.000,00</td>
+        <td>Entregue</td>
+        <td><button type="button" class="btn btn-warning" style="margin-left: 23%;" mat-button (click)="openDialogTrocar()">Trocar Pedido</button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>8873483454896</td>
+        <td>20/02/2021</td>
+        <td>Fogão Daco</td>
+        <td>900,00</td>
+        <td>Análise</td>
+        <td><button type="button" class="btn btn-danger" style="margin-left: 20%;" mat-button (click)="openDialogCancelar()">Cancelar Pedido</button></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>8873483454897</td>
+        <td>15/03/2020</td>
+        <td>Batedeira Mondial</td>
+        <td>200,00</td>
+        <td>Finalizado</td>
+        <td><a href="produtos/">
+          <button type="button" class="btn btn-primary" style="margin-left: 20%;">Peça Novamente</button>
+        </a></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>8873483454898</td>
+        <td>01/03/2020</td>
+        <td>Cooktop Eletrolux</td>
+        <td>1.600,00</td>
+        <td>Finalizado</td>
+        <td><a href="produtos/">
+          <button type="button" class="btn btn-primary" style="margin-left: 20%;">Peça Novamente</button>
+        </a></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>8873483454899</td>
+        <td>20/02/2020</td>
+        <td>Liquidificador Britania</td>
+        <td>100,00</td>
+        <td>Finalizado</td>
+        <td><a href="produtos/">
+          <button type="button" class="btn btn-primary" style="margin-left: 20%;">Peça Novamente</button>
+        </a></td>
       </tr>
     </tbody>
-  </table-->
+  </table>
 </div>

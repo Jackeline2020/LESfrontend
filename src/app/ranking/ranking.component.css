@@ -1,0 +1,43 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.conteudo{
+    min-height: 650px;
+    margin: 50px;
+  } /* colocar em todas as paginas */
+  
+.stepp{
+    margin-left: 12%;
+    margin-right: 2%;
+    padding: 8px 18px; 
+    vertical-align: middle; 
+    background:#007bff; 
+    color:black;
+    border-radius:6px; 
+    font-size: 20px; 
+}
+  
+.danger{
+    margin-left: 42%;
+    margin-top: 20%;
+}
+  
+.table{
+    margin-top: 5%;
+}
+
+.card-img-top {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.cad-button{
+    margin-top: 5%;
+    margin-left: 48%;
+}
+
+.cad-span{
+    font-size: 40px!important;
+}

@@ -2,13 +2,16 @@
 <form class="mt-4" [formGroup]='clienteForm'>
   <div class="form-row">
     <div class="col-md-12 mb-3">
-      <input type="text" class="form-control" placeholder="Nome Completo" formControlName='nome' name="nome" value="{{nomeCompleto}}">
+      <select formControlName='tipoCliente' class="form-control">
+        <option value="1" selected>Pessoa Física</option>
+        <option value="2">Pessoa Jurídica</option>
+      </select>
     </div>
     <div class="col-md-12 mb-3">
-      <input type="text" class="form-control" placeholder="E-mail" formControlName='email' name="email" value="{{email}}">
+      <input type="text" class="form-control" placeholder="Nome Completo" formControlName='nome' name="nome" value="João de Jesus Carvalho">
     </div>
     <div class="col-md-12 mb-3">
-      <input type="text" class="form-control" placeholder="CPF" formControlName='cpf' name="cpf" maxlength="14" mask="000.000.000-00" value="{{cpf}}">
+      <input type="text" class="form-control" placeholder="E-mail" formControlName='email' name="email" value="joao.jesus@gmail.com">
     </div>
   </div>
   <br>

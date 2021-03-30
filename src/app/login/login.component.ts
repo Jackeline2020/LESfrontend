@@ -51,3 +51,22 @@ export class LoginComponent implements OnInit {
   
 }
 
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.admin.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginAdminComponent {
+ 
+  constructor(private router: Router){}
+
+  login() {
+    //this.getCadastro = JSON.parse(localStorage.getItem('cadastro'));
+    /*const senhaPersistido = this.getCadastro['senha'];
+    const senhaDigitado = this.formLogin.get('senha').value;
+    const emailPersistido = this.getCadastro['email'];
+    const emailDigitado = this.formLogin.get('email').value;
+    if (senhaPersistido === senhaDigitado && emailPersistido === emailDigitado) {*/
+      this.router.navigate(['cadProdutos']);
+  }
+}

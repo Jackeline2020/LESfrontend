@@ -1,0 +1,29 @@
+<h5 class="card-title">Produtos</h5>
+<form class="mt-6"  [formGroup]='produtoForm'>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Nome" formControlName='nome' value="Microondas Eletrolux">
+        </div>
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Preço" formControlName='preco' value="1.500,00">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Quantidade" formControlName='quantidade' value="100">
+        </div>
+        <div class="col-md-6 mb-3">
+            <select formControlName='status' class="form-control">
+            <option value="1" selected>Ativado</option>
+            <option value="2">Desativado</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Exemplo de Descrição</textarea>
+        </div>
+    </div>
+<button mat-button class="btn btn-primary" (click)="onAddProduto()">Alterar</button>
+</form>

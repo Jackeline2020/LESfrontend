@@ -1,35 +1,47 @@
 <div class="conteudo">
 
-  <a href="../clientes/">
-    <button type="button" class="btn btn-primary stepp">Minha Conta</button>
+  <a href="../documentos/">
+    <button type="button" class="btn btn-primary stepp">Documentos</button>
   </a>
   <a href="../telefones/">
-  <button type="button" class="btn btn-primary stepp">Meus Telefones</button>
+  <button type="button" class="btn btn-primary stepp">Telefones</button>
   </a>
   <a href="../enderecos/">
-  <button type="button" class="btn btn-primary stepp">Meus Enderecos</button>  
+  <button type="button" class="btn btn-primary stepp">Enderecos</button>  
   </a>
   <a href="../cartoes/">
-    <button type="button" class="btn btn-primary stepp">Meus Cartões</button>  
+    <button type="button" class="btn btn-primary stepp">Cartões</button>  
   </a>
   <a href="../pedidos/">
-    <button type="button" class="btn btn-primary stepp">Meus Pedidos</button>  
+    <button type="button" class="btn btn-primary stepp">Pedidos</button>  
+  </a>
+  <a href="../cupons/">
+    <button type="button" class="btn btn-primary stepp">Cupons</button>  
   </a>
 
 <table class="table">
   <thead>
     <tr>
+      <th>Tipo</th>
       <th>Nome</th>
       <th>E-mail</th>
-      <th>CPF</th>
       <th>Alterar</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <!--tr>
       <td>{{nomeCompleto}}</td>
       <td>{{email}}</td>
       <td>{{cpf}}</td>
+      <td>
+        <button class="btn btn-link" mat-button (click)="openDialogAlterar()">
+        <span class="material-icons">mode_edit_outline</span></button>
+      </td>
+    </tr-->
+    <tr>
+      <td>Pessoa Física</td>
+      <td>João de Jesus Carvalho</td>
+      <td>joao.jesus@gmail.com</td>
       <td>
         <button class="btn btn-link" mat-button (click)="openDialogAlterar()">
         <span class="material-icons">mode_edit_outline</span></button>

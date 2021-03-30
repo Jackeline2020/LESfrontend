@@ -1,0 +1,96 @@
+<div class="conteudo">
+
+  <a href="../usuarios/">
+    <button type="button" class="btn btn-primary stepp">Usuários</button>
+  </a>
+  <a href="../estoque/">
+  <button type="button" class="btn btn-primary stepp">Estoque</button>
+  </a>
+  <a href="../solicitacoes/">
+  <button type="button" class="btn btn-primary stepp">Solicitações</button>  
+  </a>
+  <a href="../ranking/">
+    <button type="button" class="btn btn-primary stepp">Ranking</button>  
+  </a>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Código do Produto</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Quantidade</th>
+        <th scope="col">Status</th>
+        <th scope="col">Alterar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>8873483454894</td>
+        <td>Microondas Eletrolux</td>
+        <td>Exemplo de Descrição</td>
+        <td>1.500,00</td>
+        <td>100</td>
+        <td><mat-slide-toggle></mat-slide-toggle></td>
+        <td><button type="button" class="btn btn-primary" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>8873483454895</td>
+        <td>Geladeira Eletrolux</td>
+        <td>Exemplo de Descrição</td>
+        <td>2.000,00</td>
+        <td>100</td>
+        <td><mat-slide-toggle></mat-slide-toggle></td>
+        <td><button type="button" class="btn btn-primary" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>8873483454896</td>
+        <td>Fogão Daco</td>
+        <td>Exemplo de Descrição</td>
+        <td>900,00</td>
+        <td>100</td>
+        <td><mat-slide-toggle></mat-slide-toggle></td>
+        <td><button type="button" class="btn btn-primary" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>8873483454897</td>
+        <td>Batedeira Mondial</td>
+        <td>Exemplo de Descrição</td>
+        <td>200,00</td>
+        <td>100</td>
+        <td><mat-slide-toggle></mat-slide-toggle></td>
+        <td><button type="button" class="btn btn-primary" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>8873483454898</td>
+        <td>Cooktop Eletrolux</td>
+        <td>Exemplo de Descrição</td>
+        <td>1.600,00</td>
+        <td>100</td>
+        <td><mat-slide-toggle></mat-slide-toggle></td>
+        <td><button type="button" class="btn btn-primary" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>8873483454899</td>
+        <td>Liquidificador Britania</td>
+        <td>Exemplo de Descrição</td>
+        <td>100,00</td>
+        <td>100</td>
+        <td><mat-slide-toggle></mat-slide-toggle></td>
+        <td><button type="button" class="btn btn-primary" mat-button (click)="openDialogAlterar()"><span class="material-icons">mode_edit_outline</span></button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-link cad-button" mat-button (click)="openDialogCadastrar()">
+    <span class="material-icons cad-span">add_circle</span>
+  </button>
+  
+</div>

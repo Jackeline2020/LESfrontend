@@ -6,12 +6,13 @@ import { MatCardModule} from '@angular/material/card';
 import { MatDialogModule} from '@angular/material/dialog';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSlideToggleModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './routing/routing.module';
 
 import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent, LoginAdminComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent, ContentComponentDialog } from './content/content.component';
@@ -19,9 +20,16 @@ import { ClientesComponent, ClientesComponentModalDeletar, ClientesComponentModa
 import { TelefonesComponent, TelefonesComponentModalAlterar, TelefonesComponentModalCadastrar, TelefonesComponentModalDeletar } from './telefones/telefones.component';
 import { EnderecosComponent, EnderecosComponentModalCadastrar, EnderecosComponentModalDeletar, EnderecosComponentModalAlterar } from './enderecos/enderecos.component';
 import { CartoesComponent, CartoesComponentModalAlterar, CartoesComponentModalCadastrar, CartoesComponentModalDeletar } from './cartoes/cartoes.component';
-import { PedidosComponent } from './pedidos/pedidos.component';
+import { PedidosComponent, PedidosCancelarComponent, PedidosTrocarComponent } from './pedidos/pedidos.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { OperationDialogComponent } from './operation-dialog/operation-dialog.component';
+import { CuponsComponent } from './cupons/cupons.component';
+import { CadastroProdutosComponent, ProdutosComponentModalCadastrar, ProdutosComponentModalAlterar } from './cadastro-produtos/cadastro-produtos.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { DocumentosComponent } from './documentos/documentos.component';
+import { EstoqueComponent } from './estoque/estoque.component';
+import { RankingComponent } from './ranking/ranking.component';
+import { SolicitacoesComponent } from './solicitacoes/solicitacoes.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -39,6 +47,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     ClientesComponentModalAlterar,
 
     LoginComponent,
+    LoginAdminComponent,
 
     TelefonesComponent,
     TelefonesComponentModalAlterar,
@@ -56,8 +65,21 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     CartoesComponentModalDeletar,
 
     PedidosComponent,
+    PedidosCancelarComponent,
+    PedidosTrocarComponent,
+
     ProdutosComponent,
-    OperationDialogComponent
+    CadastroProdutosComponent,
+    ProdutosComponentModalCadastrar,
+    ProdutosComponentModalAlterar,
+    
+    OperationDialogComponent,
+    CuponsComponent,
+    UsuariosComponent,
+    DocumentosComponent,
+    EstoqueComponent,
+    RankingComponent,
+    SolicitacoesComponent
   ],
   imports: [
     HttpClientModule,
@@ -67,7 +89,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     AppRoutingModule,
     ReactiveFormsModule,
     MatCardModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    MatSlideToggleModule
   ],
   providers: [],
   entryComponents: [
@@ -85,7 +108,11 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     CartoesComponentModalAlterar,
     CartoesComponentModalCadastrar,
     CartoesComponentModalDeletar,
-    OperationDialogComponent
+    OperationDialogComponent,
+    PedidosCancelarComponent,
+    PedidosTrocarComponent,
+    ProdutosComponentModalCadastrar,
+    ProdutosComponentModalAlterar
   ],
   bootstrap: [
     AppComponent, 
@@ -102,7 +129,11 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     CartoesComponentModalAlterar,
     CartoesComponentModalCadastrar,
     CartoesComponentModalDeletar,
-    OperationDialogComponent
+    OperationDialogComponent,
+    PedidosCancelarComponent,
+    PedidosTrocarComponent,
+    ProdutosComponentModalCadastrar,
+    ProdutosComponentModalAlterar
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
